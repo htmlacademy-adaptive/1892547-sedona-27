@@ -1,12 +1,90 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
 </head>
 
-<body>
+<body class="page__body">
+  <header class="main-header">
+    <a class="main-header__logo" href="#">
+      <img src="img/header-logo.svg" alt="Логотип города Седона" width="195" height="96">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню.</span>
+      </button>
+      <ul class="main-nav__list nav-list">
+        <li class="nav-list__item nav-list__item--current">
+          <a href="index.html">
+            Главная
+          </a>
+        </li>
+        <li class="nav-list__item">
+          <a href="catalog.html">
+            Фото и видео
+          </a>
+        </li>
+        <li class="nav-list__item">
+          <a href="form.html">
+            Форма Отзыва
+          </a>
+        </li>
+        <li class="nav-list__item">
+          <a href="#">
+            HTML Academy
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-container">
+    <section class="page-hero">
+      <h1 class="visually-hidden">Седона — городок в Аризоне.</h1>
+      <div class="page-hero__image-container">
+        <img class="page-hero__image" src="img/sedona-hero-logo.svg" alt="Sedona." width="229" height="39">
+      </div>
+    </section>
+
+    <div class="page-container__wrapper">
+
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="main-footer__wrapper">
+      <div class="main-footer__hashtag hashtag">
+        <p class="hashtag__text">#visitsedona</p>
+      </div>
+      <div class="main-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+              Мы в VK
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+              Мы в Telegram
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              Мы в Youtube
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-footer__copyright copyright">
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">HTML Academy.</span>
+        </a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 
