@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Дмитрий Телицын](https://up.htmlacademy.ru/adaptive/27/user/1892547).
-* Наставник: [Алексей Зольников](https://htmlacademy.ru/profile/id870391).
+* Наставник: [Виктория Никитина](https://htmlacademy.ru/profile/id1217273).
 
 ---
 

@@ -1,6 +1,8 @@
 .DS_Store
 .idea
+./idea
 .vscode
+./vscode
 *.ai
 *.log
 *.pdf
