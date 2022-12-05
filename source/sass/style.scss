@@ -1,1 +1,58 @@
-// Начните писать стили здесь
+@use "./blocks/page.scss";
+@use "./blocks/advantages.scss";
+@use "./blocks/button.scss";
+@use "./blocks/card.scss";
+@use "./blocks/content.scss";
+@use "./blocks/copyright.scss";
+@use "./blocks/feature.scss";
+@use "./blocks/features.scss";
+@use "./blocks/form-container.scss";
+@use "./blocks/form-group.scss";
+@use "./blocks/form.scss";
+@use "./blocks/hashtag.scss";
+@use "./blocks/likes.scss";
+@use "./blocks/main-container.scss";
+@use "./blocks/main-footer.scss";
+@use "./blocks/main-header.scss";
+@use "./blocks/main-hero.scss";
+@use "./blocks/main-map.scss";
+@use "./blocks/main-nav.scss";
+@use "./blocks/nav-list.scss";
+@use "./blocks/order.scss";
+@use "./blocks/page-hero.scss";
+@use "./blocks/photos.scss";
+@use "./blocks/social.scss";
+@use "./blocks/video.scss";
+@use "./blocks/visually-hidden.scss";
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/ptsans.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/ptsans.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/ptsansbold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/ptsansbold.woff2") format("woff2");
+  font-display: swap;
+}

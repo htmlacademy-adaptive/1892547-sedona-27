@@ -1,0 +1,33 @@
+.feature__text-block {
+  background-color: #EEEEEE;
+}
+
+.feature__title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+  color: #000000;
+}
+
+.feature__number {
+  margin: 0;
+}
+
+.feature__description {
+  margin: 0;
+}
+
+.feature__image {
+  display: block;
+}
+
+.feature__text-block--accent {
+  background-color: #81B3D2;
+  color: #ffffff;
+}
+
+.feature__text-block--accent .feature__title {
+  color: #ffffff;
+}
