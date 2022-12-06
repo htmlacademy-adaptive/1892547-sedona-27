@@ -1,5 +1,6 @@
 .card__image {
   display: block;
+  margin-bottom: 15px;
 }
 
 .card__title {
@@ -12,4 +13,8 @@
   margin: 0;
   text-transform: none;
   font-weight: 400;
+}
+
+.card__likes {
+  margin-top: 11px;
 }
