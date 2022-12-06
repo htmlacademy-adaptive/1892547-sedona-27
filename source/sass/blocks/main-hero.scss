@@ -1,0 +1,15 @@
+.main-hero {
+  text-align: center;
+}
+
+.main-hero__image-container {
+  background-image: url("../../img/back-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  background-color: #81B3D3;
+}
+
+.main-hero__image {
+  margin: 90px auto 85px;
+}
