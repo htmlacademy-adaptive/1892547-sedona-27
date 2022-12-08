@@ -1,3 +1,31 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/ptsans.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/ptsans.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/ptsansbold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/ptsansbold.woff2") format("woff2");
+  font-display: swap;
+}
 .page {
   height: 100%;
 }
@@ -257,7 +285,7 @@
 }
 
 .main-hero__image-container {
-  background-image: url("../../img/back-mobile.jpg");
+  background-image: url("/img/back-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: contain;
@@ -319,7 +347,7 @@
 
 .page-hero__image-container {
   background-color: #81b3d3;
-  background-image: url("../../img/back-desktop.jpg");
+  background-image: url("/img/back-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: contain;
@@ -411,34 +439,5 @@
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../../fonts/ptsans.woff") format("woff");
-  font-display: swap;
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../../fonts/ptsans.woff2") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../../fonts/ptsansbold.woff") format("woff");
-  font-display: swap;
-}
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../../fonts/ptsansbold.woff2") format("woff2");
-  font-display: swap;
 }
 /*# sourceMappingURL=style.css.map */
