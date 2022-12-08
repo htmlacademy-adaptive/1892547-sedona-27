@@ -257,7 +257,7 @@
 }
 
 .main-hero__image-container {
-  background-image: url("/img/back-desktop.jpg");
+  background-image: url("../../img/back-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: contain;
@@ -319,7 +319,7 @@
 
 .page-hero__image-container {
   background-color: #81b3d3;
-  background-image: url("/img/back-desktop.jpg");
+  background-image: url("../../img/back-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: contain;
