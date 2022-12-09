@@ -11,8 +11,9 @@
 <body class="page__body">
   <div class="page__container">
     <header class="main-header">
-      <a class="main-header__logo" href="#">
-        <img src="img/header-logo.svg" alt="Логотип города Седона" width="195" height="96">
+      <a class="main-header__logo" href="index.html">
+        <img class="main-header__logo-img" src="img/header-logo.svg" alt="Логотип города Седона" width="195"
+          height="96">
       </a>
       <nav class="main-header__nav nav">
         <button class="nav__toggle nav-toggle" type="button">
@@ -58,71 +59,74 @@
 
       <section class="features">
         <h2 class="features__title">
-          Седона — небольшой<br> городок в Аризоне,<br> заслуживающий большего!
+          Седона — небольшой городок в Аризоне, заслуживающий большего!
         </h2>
         <p class="features__description">
           Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
         </p>
-        <ul class="features__list">
-          <li class="features__item feature">
-            <div class="feature__text-block feature__text-block--accent feature__text-block--first">
-              <h3 class="feature__title">Настоящий городок</h3>
-              <p class="feature__number">— №1 —</p>
-              <p class="feature__description">Cедона не аттракцион для туристов, там течет своя жизнь</p>
-            </div>
-            <img class="feature__image" src="img/photo-city@1x1.jpg" alt="Домики на фоне гор." width="320" height="260">
-            <ul class="feature__advantages-list advantages">
-              <li class="advantages__item advantages__item--housing">
-                <h3 class="advantages__title">Жилье</h3>
-                <p class="advantages__description">
-                  Рекомендуем пожить в настоящем мотеле, все как в кино!
-                </p>
-              </li>
-              <li class="advantages__item advantages__item--food">
-                <h3 class="advantages__title">Еда</h3>
-                <p class="advantages__description">
-                  Всегда заказывайте фирменный бургер, вы не разочаруетесь!
-                </p>
-              </li>
-              <li class="advantages__item advantages__item--souvenir">
-                <h3 class="advantages__title">Сувениры</h3>
-                <p class="advantages__description">
-                  Не только китайского, но и местного производства!
-                </p>
-              </li>
-            </ul>
-          </li>
-          <li class="features__item feature">
-            <div class="feature__text-block feature__text-block--accent">
-              <h3 class="feature__title">Там есть мост дьявола</h3>
-              <p class="feature__number">— №2 —</p>
-              <p class="feature__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-            </div>
-            <img class="feature__image" src="img/photo-bridge@1x1.jpg" alt="Каньон, горы, снова горы." width="320"
-              height="260">
-          </li>
-          <li class="features__item feature">
-            <div class="feature__text-block">
-              <h3 class="feature__title">Небольшая площадь</h3>
-              <p class="feature__number">— №3 —</p>
-              <p class="feature__description">Все интересные места находятся очень близко</p>
-            </div>
-          </li>
-          <li class="features__item feature">
-            <div class="feature__text-block">
-              <h3 class="feature__title">Красивая дорога</h3>
-              <p class="feature__number">— №4 —</p>
-              <p class="feature__description">Ехать в седону из Лас-Вегаса<br> совсем не скучно!</p>
-            </div>
-          </li>
-          <li class="features__item feature">
-            <div class="feature__text-block feature__text-block--last">
-              <h3 class="feature__title">Мало туристов</h3>
-              <p class="feature__number">— №5 —</p>
-              <p class="feature__description">Большинство едет в гранд каньон<br> и толпится там</p>
-            </div>
-          </li>
-        </ul>
+        <div class="features__wrapper">
+          <ul class="features__list">
+            <li class="features__item features__item--first feature">
+              <div class="feature__text-block feature__text-block--accent feature__text-block--first">
+                <h3 class="feature__title">Настоящий городок</h3>
+                <p class="feature__number">— №1 —</p>
+                <p class="feature__description">Cедона не аттракцион для туристов, там течет своя жизнь</p>
+              </div>
+              <img class="feature__image" src="img/photo-city@1x1.jpg" alt="Домики на фоне гор." width="320"
+                height="260">
+              <ul class="feature__advantages-list advantages">
+                <li class="advantages__item advantages__item--housing">
+                  <h3 class="advantages__title">Жилье</h3>
+                  <p class="advantages__description">
+                    Рекомендуем пожить в настоящем мотеле, все как в кино!
+                  </p>
+                </li>
+                <li class="advantages__item advantages__item--food">
+                  <h3 class="advantages__title">Еда</h3>
+                  <p class="advantages__description">
+                    Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+                  </p>
+                </li>
+                <li class="advantages__item advantages__item--souvenir">
+                  <h3 class="advantages__title">Сувениры</h3>
+                  <p class="advantages__description">
+                    Не только китайского, но и местного производства!
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li class="features__item features__item--second feature">
+              <img class="feature__image" src="img/photo-bridge@1x1.jpg" alt="Каньон, горы, снова горы." width="320"
+                height="260">
+              <div class="feature__text-block feature__text-block--accent">
+                <h3 class="feature__title">Там есть мост дьявола</h3>
+                <p class="feature__number">— №2 —</p>
+                <p class="feature__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+              </div>
+            </li>
+            <li class="features__item feature">
+              <div class="feature__text-block">
+                <h3 class="feature__title">Небольшая площадь</h3>
+                <p class="feature__number">— №3 —</p>
+                <p class="feature__description">Все интересные места находятся очень близко</p>
+              </div>
+            </li>
+            <li class="features__item feature">
+              <div class="feature__text-block">
+                <h3 class="feature__title">Красивая дорога</h3>
+                <p class="feature__number">— №4 —</p>
+                <p class="feature__description">Ехать в седону из Лас-Вегаса<br> совсем не скучно!</p>
+              </div>
+            </li>
+            <li class="features__item feature">
+              <div class="feature__text-block feature__text-block--last">
+                <h3 class="feature__title">Мало туристов</h3>
+                <p class="feature__number">— №5 —</p>
+                <p class="feature__description">Большинство едет в гранд каньон<br> и толпится там</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="order">
@@ -146,7 +150,7 @@
       <div class="main-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank">
               <svg class="social__logo" xmlns="http://www.w3.org/2000/svg" width="24" height="14" fill="none"
                 viewBox="0 0 24 14">
                 <path fill="#fff" fill-rule="evenodd"
@@ -157,7 +161,7 @@
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" target="_blank">
               <svg class="social__logo" xmlns="http://www.w3.org/2000/svg" width="22" height="18" fill="none"
                 viewBox="0 0 22 18">
                 <path fill="#fff"
@@ -167,7 +171,8 @@
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"
+              target="_blank">
               <svg class="social__logo" xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none"
                 viewBox="0 0 20 14">
                 <path fill="#fff"
@@ -179,7 +184,7 @@
         </ul>
       </div>
       <div class="main-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <span class="visually-hidden">HTML Academy.</span>
           <svg class="copyright__logo" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
             width="129" height="36" fill="none" viewBox="0 0 129 36">

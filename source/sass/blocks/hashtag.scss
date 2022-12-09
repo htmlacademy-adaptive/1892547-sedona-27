@@ -1,3 +1,5 @@
+@use "../blocks/consts.scss";
+
 .hashtag__text {
   margin-top: 28.5px;
   margin-bottom: 33.5px;
@@ -5,5 +7,5 @@
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  color: #000000;
+  color: consts.$title-color;
 }

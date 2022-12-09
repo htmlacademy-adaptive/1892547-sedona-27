@@ -1,3 +1,5 @@
+@use "../blocks/consts.scss";
+
 .order {
   text-transform: uppercase;
   text-align: center;
@@ -9,7 +11,7 @@
   line-height: 26px;
   margin: 38px 29px 20px;
   padding: 0;
-  color: #000000
+  color: consts.$title-color;
 }
 
 .order__description {

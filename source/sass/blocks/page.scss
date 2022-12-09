@@ -1,3 +1,5 @@
+@use "../blocks/consts.scss";
+
 .page {
   height: 100%;
 }
@@ -7,8 +9,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  // background-color: darken(#ffffff, 30);
-  color: #333333;
+  color: consts.$primary-text-color;
   min-width: 320px;
   margin: 0;
 }
@@ -18,6 +19,14 @@
   flex-direction: column;
   margin: 0 auto;
   background-color: #ffffff;
-  max-width: 1200px;
   min-height: 100%;
+  max-width: 320px;
+
+  @media (min-width: consts.$tablet-width) {
+    max-width: 768px;
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    max-width: 1200px;
+  }
 }

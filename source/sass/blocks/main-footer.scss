@@ -1,7 +1,30 @@
+@use "./consts.scss";
+
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: consts.$tablet-width) {
+    padding-left: 45px;
+    padding-right: 76px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .main-footer__social {
   margin-bottom: 40px;
+
+  @media (min-width: consts.$tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .main-footer__copyright {
   margin-bottom: 23px;
+
+  @media (min-width: consts.$tablet-width) {
+    margin-bottom: 0;
+  }
 }

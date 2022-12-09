@@ -3,14 +3,16 @@
 }
 
 .page-hero__image-container {
-  background-color: #81B3D3;
-  background-image: url("../../img/back-desktop.jpg");
+  background-color: #81b3d3;
+  background-image: url("/img/back-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: contain;
 }
 
 .page-hero__image {
-  margin-top: 52px;
-  margin-bottom: 67px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 52px;
+  padding-bottom: 67px;
 }

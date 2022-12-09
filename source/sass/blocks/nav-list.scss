@@ -1,4 +1,39 @@
+@use "../blocks/consts.scss";
+
+.nav-list {
+  display: flex;
+
+  @media (max-width: consts.$mobile-width-only) {
+    display: none;
+  }
+}
+
+.nav-list__item {
+  padding-top: 18px;
+  padding-bottom: 17px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+
+  @media (min-width: consts.$tablet-width) {
+    min-width: 153px;
+
+    &:nth-child(2) {
+      margin-right: 153px;
+    }
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    min-width: 240px;
+
+    &:nth-child(2) {
+      margin-right: 240px;
+    }
+  }
+}
+
 .nav-list__link {
   text-decoration: none;
-  color: #000000;
+  color: consts.$title-color;
 }
