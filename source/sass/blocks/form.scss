@@ -8,9 +8,8 @@
   margin: 0;
   margin-bottom: 64px;
   border: none;
-}
 
-
-.form__group:last-of-type {
-  margin-bottom: 56px;
+  &:last-of-type {
+    margin-bottom: 56px;
+  }
 }

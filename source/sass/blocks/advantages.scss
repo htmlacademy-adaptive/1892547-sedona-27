@@ -1,3 +1,5 @@
+@use "../blocks/consts.scss";
+
 .advantages__title {
   margin-top: 33px;
   margin-left: 65px;
@@ -6,11 +8,17 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  color: #000000;
+  color: consts.$title-color;
 }
 
-.advantages__item:first-child .advantages__title {
-  margin-top: 31px;
+.advantages__item {
+  &:first-child .advantages__title {
+    margin-top: 31px;
+  }
+
+  &:last-child {
+    margin-bottom: 46px;
+  }
 }
 
 .advantages__description {
@@ -18,6 +26,3 @@
   padding: 0;
 }
 
-.advantages__item:last-child {
-  margin-bottom: 46px;
-}

@@ -1,3 +1,5 @@
+@use "../blocks/consts.scss";
+
 .feature__title {
   text-transform: uppercase;
   font-weight: 700;
@@ -5,7 +7,7 @@
   line-height: 26px;
   margin: 0;
   margin-bottom: 11px;
-  color: #000000;
+  color: consts.$title-color;
 }
 
 .feature__advantages-list {
@@ -31,23 +33,24 @@
   background-color: #eeeeee;
   padding: 24px 26px;
   text-align: center;
+
+  &--accent {
+    background-color: #81b3d2;
+    color: consts.$secondary-text-color;
+    padding: 37px 18px;
+  }
+
+  &--accent .feature__title {
+    color: consts.$secondary-text-color;
+  }
+
+  &--first {
+    padding-top: 54px;
+    padding-bottom: 40px;
+  }
+
+  &--last {
+    padding-bottom: 28px;
+  }
 }
 
-.feature__text-block--accent {
-  background-color: #81b3d2;
-  color: #ffffff;
-  padding: 37px 18px;
-}
-
-.feature__text-block--first {
-  padding-top: 54px;
-  padding-bottom: 40px;
-}
-
-.feature__text-block--last {
-  padding-bottom: 28px;
-}
-
-.feature__text-block--accent .feature__title {
-  color: #ffffff;
-}

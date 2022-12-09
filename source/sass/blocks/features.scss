@@ -1,3 +1,5 @@
+@use "../blocks/consts.scss";
+
 .features {
   text-transform: uppercase;
 }
@@ -14,12 +16,12 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  color: #000000;
+  color: consts.$title-color;
   margin: 32px 18px 35px;
 }
 
 .features__description {
   text-align: center;
-  color: #333333;
+  color: consts.$primary-text-color;
   margin: 0 18px 32px;
 }

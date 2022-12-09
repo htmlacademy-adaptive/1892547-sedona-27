@@ -1,9 +1,11 @@
+@use "../blocks/consts.scss";
+
 .photos__title {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
-  color: #000000;
+  color: consts.$title-color;
   margin: 0;
   margin-bottom: 25px;
 }
