@@ -1,11 +1,10 @@
 @use "../blocks/consts.scss";
+@use "../blocks/mixins.scss";
 
 .video__title {
+  @include mixins.large-text;
   text-align: center;
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
   color: consts.$title-color;
   margin: 0 26px 27px 28px;
 }

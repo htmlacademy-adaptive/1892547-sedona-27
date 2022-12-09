@@ -1,10 +1,9 @@
 @use "../blocks/consts.scss";
+@use "../blocks/mixins.scss";
 
 .form-container__title {
+  @include mixins.large-text;
   text-align: center;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
   text-transform: uppercase;
   color: consts.$title-color;
   margin: 0;

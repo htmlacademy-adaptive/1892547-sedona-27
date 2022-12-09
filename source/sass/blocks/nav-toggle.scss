@@ -1,0 +1,10 @@
+@use "../blocks/consts.scss";
+
+.nav-toggle {
+  margin-left: auto;
+  padding: 17px 20px;
+
+  @media (min-width: consts.$tablet-width) {
+    display: none;
+  }
+}

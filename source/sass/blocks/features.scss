@@ -1,21 +1,56 @@
 @use "../blocks/consts.scss";
+@use "../blocks/mixins.scss";
 
 .features {
   text-transform: uppercase;
+}
+
+.features__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .features__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: consts.$tablet-width) {
+    display: grid;
+    grid-template-columns: 256px 256px 256px;
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+  }
+}
+
+.features__item {
+  @media (min-width: consts.$tablet-width) {
+    display: grid;
+
+    &--first,
+    &--second {
+      grid-column: 1 / 4;
+      grid-template-columns: 256px 256px 256px;
+    }
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    &--first,
+    &--second {
+      grid-column: 1 / 4;
+      grid-template-columns: 400px 400px 400px;
+    }
+  }
 }
 
 .features__title {
+  @include mixins.large-text;
   text-align: center;
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
   color: consts.$title-color;
   margin: 32px 18px 35px;
 }

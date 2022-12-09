@@ -1,3 +1,19 @@
+@use "../blocks/consts.scss";
+
+.nav {
+  display: flex;
+
+  @media (min-width: consts.$tablet-width) {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
 .nav__list {
   margin: 0;
   padding: 0;

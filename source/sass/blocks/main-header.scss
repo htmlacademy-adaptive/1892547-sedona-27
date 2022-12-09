@@ -1,6 +1,14 @@
-.main-header__nav {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
+@use "../blocks/mixins.scss";
+
+.main-header {
+  position: relative;
+}
+
+.main-header__logo-img {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
