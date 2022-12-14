@@ -1,15 +1,29 @@
+@use "./consts.scss";
+
 .main-hero {
   text-align: center;
 }
 
 .main-hero__image-container {
-  background-image: url("/img/back-mobile.jpg");
+  background-image: url("/img/back-desktop.jpg");
   background-repeat: no-repeat;
+  background-position: 50% 0;
   background-size: cover;
-  object-fit: contain;
   background-color: #81b3d3;
 }
 
 .main-hero__image {
   margin: 90px auto 85px;
+
+  @media (min-width: consts.$tablet-width) {
+    width: 461px;
+    height: 350px;
+    margin: 77px auto 91px;
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    width: 459.5px;
+    height: 350px;
+    margin: 78px auto 90px;
+  }
 }

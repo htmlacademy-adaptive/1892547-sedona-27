@@ -1,3 +1,5 @@
+@use "./consts.scss";
+
 .page-hero {
   text-align: center;
 }
@@ -6,8 +8,16 @@
   background-color: #81b3d3;
   background-image: url("/img/back-desktop.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  object-fit: contain;
+  background-size: auto;
+  background-position: 46% -320px;
+
+  @media (min-width: consts.$tablet-width) {
+    background-position: 50% -265px;
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    background-position: 50% -265px;
+  }
 }
 
 .page-hero__image {
@@ -15,4 +25,14 @@
   margin: 0 auto;
   padding-top: 52px;
   padding-bottom: 67px;
+
+  @media (min-width: consts.$tablet-width) {
+    width: 457px;
+    height: 77.6px;
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    width: 459.5px;
+    height: 79.8px;
+  }
 }

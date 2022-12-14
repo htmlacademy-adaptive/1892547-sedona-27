@@ -1,23 +1,50 @@
 @use "../blocks/consts.scss";
 
 .nav-list {
+  position: absolute;
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  background-color: #81b3d2;
+  z-index: 3;
 
-  @media (max-width: consts.$mobile-width-only) {
-    display: none;
+  .nav--nojs & {
+    position: static;
+  }
+
+  @media (min-width: consts.$tablet-width) {
+    flex-direction: row;
+    background-color: #ffffff;
   }
 }
 
 .nav-list__item {
-  padding-top: 18px;
-  padding-bottom: 17px;
+  display: none;
+  box-sizing: border-box;
+  padding-top: 17px;
+  padding-bottom: 12px;
   text-align: center;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  border-top: 1px solid rgba(255, 255, 255, 20%);
+  border-bottom: 1px solid rgba(1, 1, 1, 20%);
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
 
   @media (min-width: consts.$tablet-width) {
+    display: block;
     min-width: 153px;
+    border: none;
+    font-size: 14px;
+    line-height: 21px;
 
     &:nth-child(2) {
       margin-right: 153px;
@@ -35,5 +62,13 @@
 
 .nav-list__link {
   text-decoration: none;
-  color: consts.$title-color;
+  color: consts.$secondary-text-color;
+
+  @media (min-width: consts.$tablet-width) {
+    color: consts.$title-color;
+
+    &--current {
+      color: #766357;
+    }
+  }
 }
