@@ -1,0 +1,10 @@
+@use "./consts.scss";
+
+.button {
+  background-color: consts.$primary-color;
+  text-decoration: none;
+  color: consts.$secondary-text-color;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}

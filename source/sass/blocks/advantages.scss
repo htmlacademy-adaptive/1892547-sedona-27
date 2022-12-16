@@ -11,16 +11,50 @@
 }
 
 .advantages__item {
+  position: relative;
+
   &:first-child .advantages__title {
-    margin-top: 31px;
+    margin-top: 33px;
   }
 
   &:last-child {
     margin-bottom: 46px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -8px;
+    left: 18.5px;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &--housing::before {
+    background-image: url("../../img/house-icon.svg");
+  }
+
+  &--food::before {
+    background-image: url("../../img/burger-icon.svg");
+  }
+
+  &--souvenir::before {
+    background-image: url("../../img/gift-icon.svg");
   }
 }
 
 .advantages__description {
   margin: 0 18px 0 65px;
   padding: 0;
+
+  @media (max-width: consts.$desktop-width - 1) {
+    .advantages__item--housing & {
+      br {
+        display: none;
+      }
+    }
+  }
 }
