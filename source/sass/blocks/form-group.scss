@@ -2,35 +2,50 @@
 @use "../blocks/mixins.scss";
 
 .form-group__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
 
-  @media (min-width: consts.$tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-
-    &--name,
-    &--contacts {
-      flex-direction: column;
-    }
-
-    &--attractions {
-      width: 480px;
-    }
+@media (min-width: consts.$tablet-width) {
+  .form__group--experience .form-group__list,
+  .form__group--attractions .form-group__list {
+    flex-direction: row;
   }
 
-  @media (min-width: consts.$desktop-width) {
-    &--attractions {
-      width: 100%;
-    }
+  .form__group--attractions .form-group__list {
+    width: 480px;
   }
 }
 
-.form-group__item {
-  display: flex;
-  flex-direction: column;
+@media (min-width: consts.$desktop-width) {
+  .form__group--attractions .form-group__list {
+    width: 100%;
+  }
+}
+
+.form-group__item--phone::after,
+.form-group__item--mail::after {
+  position: absolute;
+  content: "";
+  width: 58px;
+  height: 58px;
+  background-color: #e6e6e6;
+  margin-left: -58px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-group__item--phone::after {
+  background-image: url("../../img/phone.svg");
+}
+
+.form-group__item--mail::after {
+  background-image: url("../../img/mail.svg");
 }
 
 .form-group__title {
@@ -43,14 +58,33 @@
 }
 
 .form-group__label {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
   text-transform: uppercase;
+}
+
+.form__wrapper .form-group__label {
+  margin-left: 16px;
 }
 
 .form-group__input {
   @include mixins.large-text;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 280px;
+  border: none;
   color: consts.$title-color;
   padding: 16px;
   background-color: #f2f2f2;
+
+  &--review {
+    resize: none;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 150px;
+    margin-bottom: 51px;
+  }
 }
 
 .form-group__name {
@@ -58,4 +92,44 @@
   text-transform: none;
   color: consts.$title-color;
   padding: 10px 0 10px 62px;
+}
+
+.form-group__mark {
+  position: absolute;
+  content: "";
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+}
+
+.form__group--experience .form-group__mark {
+  border-radius: 50%;
+}
+
+.form__group--attractions .form-group__mark {
+  border-radius: 4px;
+}
+
+.form-group__input[type="checkbox"]:checked + .form-group__mark::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 14px;
+  left: 12px;
+  width: 22px;
+  height: 16px;
+  background-image: url("../../img/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-group__input[type="radio"]:checked + .form-group__mark::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: calc(50% - 16px/2 + 0px);
+  top: calc(50% - 16px/2);
+  background-color: consts.$primary-text-color;
+  border-radius: 50%;
 }
