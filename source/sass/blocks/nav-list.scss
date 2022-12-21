@@ -8,14 +8,14 @@
   background-color: consts.$primary-color;
   z-index: 3;
 
-  .nav--nojs & {
-    position: static;
-  }
-
   @media (min-width: consts.$tablet-width) {
     flex-direction: row;
     background-color: #ffffff;
   }
+}
+
+.nav--nojs .nav-list {
+  position: static;
 }
 
 .nav-list__item {
@@ -44,6 +44,7 @@
     border: none;
     font-size: 14px;
     line-height: 21px;
+    padding-top: 18px;
 
     &:nth-child(2) {
       margin-right: 153px;

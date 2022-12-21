@@ -1,24 +1,13 @@
 @use "../blocks/consts.scss";
 @use "../blocks/mixins.scss";
 
-.advantages__title {
-  @include mixins.large-text;
-  margin-top: 33px;
-  margin-left: 65px;
-  margin-bottom: 16px;
-  padding: 0;
-  color: consts.$title-color;
-}
-
 .advantages__item {
   position: relative;
 
-  &:first-child .advantages__title {
-    margin-top: 33px;
-  }
-
-  &:last-child {
-    margin-bottom: 46px;
+  @media (max-width: consts.$mobile-width-only) {
+    &:last-child {
+      margin-bottom: 46px;
+    }
   }
 
   &::before {
@@ -35,14 +24,73 @@
 
   &--housing::before {
     background-image: url("../../img/house-icon.svg");
+
+    @media (min-width: consts.$tablet-width) {
+      width: 77px;
+      height: 72px;
+      top: 59px;
+      left: 89px;
+    }
   }
 
   &--food::before {
     background-image: url("../../img/burger-icon.svg");
+
+    @media (min-width: consts.$tablet-width) {
+      width: 81px;
+      height: 68px;
+      top: 62px;
+      left: 87px;
+    }
   }
 
   &--souvenir::before {
     background-image: url("../../img/gift-icon.svg");
+
+    @media (min-width: consts.$tablet-width) {
+      width: 67px;
+      height: 75px;
+      top: 63px;
+      left: 98px;
+    }
+  }
+}
+
+.advantages__title {
+  @include mixins.large-text;
+  margin-top: 33px;
+  margin-left: 65px;
+  margin-bottom: 16px;
+  padding: 0;
+  color: consts.$title-color;
+
+  @media (max-width: consts.$mobile-width-only) {
+    .advantages__item--housing & {
+      margin-top: 33px;
+    }
+  }
+
+  @media (min-width: consts.$tablet-width) {
+    font-size: 21px;
+    text-align: center;
+    margin-bottom: 23px;
+    margin-top: 0;
+    margin-right: 33px;
+
+    .advantages__item--housing & {
+      padding-top: 158px;
+      margin-left: 34px;
+    }
+
+    .advantages__item--food & {
+      padding-top: 156px;
+      margin-left: 34px;
+    }
+
+    .advantages__item--souvenir & {
+      padding-top: 153px;
+      margin-left: 32px;
+    }
   }
 }
 
@@ -50,11 +98,28 @@
   margin: 0 18px 0 65px;
   padding: 0;
 
-  @media (max-width: consts.$desktop-width - 1) {
+  @media (max-width: consts.$mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: consts.$tablet-width) {
+    text-align: center;
+    margin-left: 33px;
+    margin-right: 33px;
+    min-width: 190px;
+
     .advantages__item--housing & {
-      br {
-        display: none;
-      }
+      margin-bottom: 60px;
+    }
+
+    .advantages__item--food & {
+      margin-bottom: 61px;
+    }
+
+    .advantages__item--souvenir & {
+      margin-bottom: 64px;
     }
   }
 }

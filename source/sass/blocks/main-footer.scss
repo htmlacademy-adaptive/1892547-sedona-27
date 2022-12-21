@@ -6,10 +6,16 @@
   align-items: center;
 
   @media (min-width: consts.$tablet-width) {
-    padding-left: 45px;
+    padding-left: 60px;
     padding-right: 76px;
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+.main-footer__hashtag {
+  @media (min-width: consts.$tablet-width) {
+    margin-right: 12px;
   }
 }
 
@@ -17,7 +23,7 @@
   margin-bottom: 40px;
 
   @media (min-width: consts.$tablet-width) {
-    margin-bottom: 0;
+    margin-bottom: 36px;
   }
 }
 
@@ -26,6 +32,6 @@
   margin-bottom: 23px;
 
   @media (min-width: consts.$tablet-width) {
-    margin-bottom: 0;
+    margin-bottom: 36px;
   }
 }
