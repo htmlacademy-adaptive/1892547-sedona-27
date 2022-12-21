@@ -25,6 +25,7 @@
 
   @media (max-width: consts.$mobile-width-only) {
     .features__item--first & {
+      position: relative;
       padding-top: 70px;
       padding-bottom: 40px;
 
