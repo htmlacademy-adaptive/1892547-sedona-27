@@ -33,17 +33,21 @@
 }
 
 .main-hero__image {
-  margin: 90px auto 85px;
+  margin: 0 auto;
+  padding-top: 90px;
+  padding-bottom: 79px;
 
   @media (min-width: consts.$tablet-width) {
     width: 461px;
     height: 350px;
-    margin: 77px auto 91px;
+    padding-top: 77px;
+    padding-bottom: 85px;
   }
 
   @media (min-width: consts.$desktop-width) {
     width: 459.5px;
     height: 350px;
-    margin: 78px auto 90px;
+    padding-top: 78px;
+    padding-bottom: 90px;
   }
 }

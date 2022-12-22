@@ -11,22 +11,13 @@
 .form__wrapper {
   @media (min-width: consts.$tablet-width) {
     display: flex;
-    gap: 70px;
+    gap: 88px;
   }
 
   @media (min-width: consts.$desktop-width) {
     display: flex;
     gap: 128px;
   }
-}
-
-.form__footnote {
-  font-size: 12px;
-  color: rgba(consts.$primary-text-color, 0.6);
-  margin-top: 3px;
-  margin-bottom: 54px;
-  text-transform: uppercase;
-  text-align: end;
 }
 
 .form__group {
@@ -44,14 +35,55 @@
 
   &--experience {
     margin-bottom: 50px;
+
+    @media (min-width: consts.$tablet-width) {
+      margin-bottom: 48px;
+    }
   }
 
   &--attractions {
     margin-bottom: 48px;
+
+    @media (min-width: consts.$tablet-width) {
+      margin-bottom: 42px;
+    }
+  }
+
+  &--review {
+    width: 100%;
+  }
+}
+
+.form__submit {
+  margin-bottom: 54px;
+
+  @media (min-width: consts.$tablet-width) {
+    width: 100%;
+    display: flex;
+    align-items: center;
   }
 }
 
 .form__button {
   width: 100%;
   padding: 16px;
+
+  @media (min-width: consts.$tablet-width) {
+    width: 324px;
+    margin-right: auto;
+  }
+}
+
+.form__footnote {
+  font-size: 12px;
+  color: rgba(consts.$primary-text-color, 0.6);
+  margin-top: 3px;
+  text-transform: uppercase;
+  text-align: end;
+
+  @media (min-width: consts.$tablet-width) {
+    font-size: 14px;
+    margin-top: 23px;
+    margin-left: auto;
+  }
 }

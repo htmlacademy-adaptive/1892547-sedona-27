@@ -59,12 +59,12 @@
   @include mixins.large-text;
   text-align: center;
   color: consts.$title-color;
-  margin-top: 28px;
+  margin-top: 34px;
   margin-bottom: 35px;
 
   @media (min-width: consts.$tablet-width) {
     font-size: 21px;
-    margin-top: 42px;
+    margin-top: 48px;
     margin-bottom: 29px;
 
     br:first-child {
