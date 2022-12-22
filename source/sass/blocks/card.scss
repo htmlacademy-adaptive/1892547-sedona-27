@@ -1,12 +1,41 @@
+@use "../blocks/consts.scss";
+
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: consts.$tablet-width) {
+    display: block;
+  }
+}
+
+.card__wrapper {
+  @media (min-width: consts.$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .card__image {
   display: block;
   margin-bottom: 14.5px;
+
+  @media (min-width: consts.$tablet-width) {
+    width: 100%;
+    height: 267px;
+
+    .card:first-child & {
+      height: 400px;
+    }
+  }
+}
+
+.card__caption {
+  @media (min-width: consts.$tablet-width) {
+    margin-top: 7px;
+    margin-left: 19px;
+  }
 }
 
 .card__title {
@@ -23,4 +52,9 @@
 
 .card__likes {
   margin-top: 17px;
+
+  @media (min-width: consts.$tablet-width) {
+    margin-left: auto;
+    margin-right: 19px;
+  }
 }

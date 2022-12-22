@@ -7,14 +7,37 @@
   text-transform: uppercase;
   color: consts.$title-color;
   margin: 0 6px 27px 8px;
+
+  @media (min-width: consts.$tablet-width) {
+    font-size: 30px;
+    margin-top: 11px;
+    margin-left: 3px;
+    margin-bottom: 30px;
+  }
 }
 
 .video__description {
   text-align: center;
   text-transform: uppercase;
   margin: 0 6px 38px 8px;
+
+  @media (max-width: consts.$mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: consts.$tablet-width) {
+    margin-left: 3px;
+    margin-bottom: 90px;
+  }
 }
 
 .video__content {
   text-align: center;
+
+  @media (min-width: consts.$tablet-width) {
+    width: 648px;
+    height: 500px;
+  }
 }

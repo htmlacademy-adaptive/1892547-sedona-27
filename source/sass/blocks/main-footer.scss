@@ -13,6 +13,16 @@
   }
 }
 
+.page-container + .main-footer {
+  @media (min-width: consts.$tablet-width) {
+    padding-right: 60px;
+
+    .main-footer__hashtag {
+      margin-right: -9px;
+    }
+  }
+}
+
 .main-footer__hashtag {
   @media (min-width: consts.$tablet-width) {
     margin-right: 12px;

@@ -1,3 +1,5 @@
+@use "../blocks/consts.scss";
+
 .likes__count {
   position: relative;
   font-weight: 700;
@@ -12,5 +14,9 @@
     background-repeat: no-repeat;
     width: 23px;
     height: 21px;
+
+    @media (min-width: consts.$tablet-width) {
+      left: 5px;
+    }
   }
 }
