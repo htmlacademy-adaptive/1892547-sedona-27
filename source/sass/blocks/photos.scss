@@ -54,7 +54,29 @@
 }
 
 .photos__item {
+  position: relative;
   margin: 50px 20px;
+
+  @media (max-width: consts.$mobile-width-only) {
+    &::before {
+      position: absolute;
+      content: "";
+      top: -24px;
+      height: 1px;
+      width: 100vw;
+      margin: 0 calc(-50vw + 50%);
+      background-color: #e5e5e5;
+    }
+
+    &:last-child::after {
+      position: absolute;
+      content: "";
+      bottom: -27px;
+      height: 1px;
+      width: 100vw;
+      background-color: #e5e5e5;
+    }
+  }
 
   @media (min-width: consts.$tablet-width) {
     margin: 0;

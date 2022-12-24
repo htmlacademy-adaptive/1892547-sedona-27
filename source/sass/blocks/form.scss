@@ -10,8 +10,18 @@
 
 .form__wrapper {
   @media (min-width: consts.$tablet-width) {
+    position: relative;
     display: flex;
     gap: 88px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 87%;
+      left: calc(50% - 1px);
+      background-color: #dbdbdb;
+    }
   }
 
   @media (min-width: consts.$desktop-width) {
@@ -21,6 +31,7 @@
 }
 
 .form__group {
+  position: relative;
   padding: 0;
   margin: 0;
   border: none;
