@@ -11,6 +11,11 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  @media (min-width: consts.$desktop-width) {
+    padding-left: 119px;
+    padding-right: 137px;
+  }
 }
 
 .page-container + .main-footer {

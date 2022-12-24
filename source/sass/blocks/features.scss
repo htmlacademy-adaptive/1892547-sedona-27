@@ -87,9 +87,7 @@
   }
 
   @media (min-width: consts.$desktop-width) {
-    br {
-      display: none;
-    }
+    margin-top: 60px;
   }
 }
 
@@ -100,12 +98,14 @@
   margin-bottom: 16px;
 
   @media (min-width: consts.$tablet-width) {
+    margin-bottom: 55px;
+
     br {
       display: none;
     }
   }
 
-  @media (min-width: consts.$tablet-width) {
-    margin-bottom: 55px;
+  @media (min-width: consts.$desktop-width) {
+    margin-bottom: 44px;
   }
 }
