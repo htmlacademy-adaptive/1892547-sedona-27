@@ -24,8 +24,15 @@
   }
 
   @media (min-width: consts.$desktop-width) {
+    .form__group--experience & {
+      justify-content: space-between;
+      column-gap: 28px;
+      padding: 0 53px;
+    }
+
     .form__group--attractions & {
-      width: 100%;
+      margin: 0 45px;
+      column-gap: 64px;
     }
   }
 }
@@ -55,6 +62,13 @@
 
   &--mail::after {
     background-image: url("../../img/mail.svg");
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    .form__group--experience &,
+    .form__group--attractions & {
+      min-width: auto;
+    }
   }
 }
 
@@ -125,6 +139,34 @@
       }
     }
   }
+
+  @media (min-width: consts.$desktop-width) {
+    .form__group--name & {
+      margin-left: 32px;
+      text-align: center;
+    }
+
+    .form__group--contacts & {
+      margin-left: 30px;
+    }
+
+    .form__group--experience & {
+      margin-bottom: 44px;
+    }
+
+    .form__group--attractions & {
+      margin-bottom: 61px;
+    }
+
+    .form__group--experience &,
+    .form__group--attractions &,
+    .form__group--review & {
+      &::before,
+      &::after {
+        width: 280px;
+      }
+    }
+  }
 }
 
 .form-group__label {
@@ -132,6 +174,7 @@
   flex-wrap: wrap;
   position: relative;
   text-transform: uppercase;
+  cursor: pointer;
 
   .form__wrapper & {
     margin-left: 16px;
@@ -142,11 +185,16 @@
   @include mixins.large-text;
   position: relative;
   box-sizing: border-box;
-  min-width: 280px;
+  width: 280px;
   border: none;
   color: consts.$title-color;
   padding: 16px;
   background-color: #f2f2f2;
+
+  &[type="tel"],
+  &[type="email"] {
+    padding-right: 60px;
+  }
 
   &--review {
     resize: none;
@@ -158,6 +206,20 @@
     @media (min-width: consts.$tablet-width) {
       min-height: 160px;
       margin-bottom: 43px;
+    }
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    width: 430px;
+
+    &[type="tel"],
+    &[type="email"] {
+      width: 402px;
+    }
+
+    &--review {
+      width: 768px;
+      margin-bottom: 48px;
     }
   }
 }

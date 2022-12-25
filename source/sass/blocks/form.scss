@@ -13,6 +13,7 @@
     position: relative;
     display: flex;
     gap: 88px;
+    margin-bottom: 64px;
 
     &::before {
       position: absolute;
@@ -27,6 +28,12 @@
   @media (min-width: consts.$desktop-width) {
     display: flex;
     gap: 128px;
+    margin-bottom: 71px;
+
+    &::before {
+      left: calc(50% + 13px);
+      height: calc(100% + 14px);
+    }
   }
 }
 
@@ -35,13 +42,22 @@
   padding: 0;
   margin: 0;
   border: none;
+  width: 100%;
 
   &--name {
     margin-bottom: 64px;
+
+    @media (min-width: consts.$tablet-width) {
+      margin-bottom: 0;
+    }
   }
 
   &--contacts {
     margin-bottom: 59px;
+
+    @media (min-width: consts.$tablet-width) {
+      margin-bottom: 0;
+    }
   }
 
   &--experience {
@@ -49,6 +65,10 @@
 
     @media (min-width: consts.$tablet-width) {
       margin-bottom: 48px;
+    }
+
+    @media (min-width: consts.$desktop-width) {
+      margin-bottom: 73px;
     }
   }
 
@@ -58,10 +78,20 @@
     @media (min-width: consts.$tablet-width) {
       margin-bottom: 42px;
     }
+
+    @media (min-width: consts.$desktop-width) {
+      margin-bottom: 86px;
+    }
   }
 
   &--review {
     width: 100%;
+
+    @media (min-width: consts.$desktop-width) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
 
@@ -73,6 +103,10 @@
     display: flex;
     align-items: center;
   }
+
+  @media (min-width: consts.$desktop-width) {
+    width: 768px;
+  }
 }
 
 .form__button {
@@ -82,6 +116,10 @@
   @media (min-width: consts.$tablet-width) {
     width: 324px;
     margin-right: auto;
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    width: 384px;
   }
 }
 

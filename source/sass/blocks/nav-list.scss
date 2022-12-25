@@ -63,9 +63,11 @@
 .nav-list__link {
   text-decoration: none;
   color: consts.$secondary-text-color;
+  padding: 6px 90px;
 
   @media (min-width: consts.$tablet-width) {
     color: consts.$title-color;
+    padding: 18px 20px;
 
     &--current {
       color: #766357;
