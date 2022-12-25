@@ -10,6 +10,11 @@
     margin-top: 30px;
     margin-bottom: 80px;
   }
+
+  @media (min-width: consts.$desktop-width) {
+    margin-top: 63px;
+    margin-bottom: 89px;
+  }
 }
 
 .photos__title {
@@ -50,12 +55,13 @@
   @media (min-width: consts.$desktop-width) {
     display: grid;
     grid-template-columns: 400px 400px 400px;
+    margin-bottom: 48px;
   }
 }
 
 .photos__item {
   position: relative;
-  margin: 50px 20px;
+  margin: 50px 0;
 
   @media (max-width: consts.$mobile-width-only) {
     &::before {
@@ -80,8 +86,6 @@
 
   @media (min-width: consts.$tablet-width) {
     margin: 0;
-    background-color: #f2f2f2;
-    padding-bottom: 17px;
 
     &:nth-child(2n+1):not(:first-child) {
       background-color: #eaeaea;

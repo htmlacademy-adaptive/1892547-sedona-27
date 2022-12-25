@@ -14,6 +14,11 @@
     margin-left: 3px;
     margin-bottom: 30px;
   }
+
+  @media (min-width: consts.$desktop-width) {
+    margin-top: 13px;
+    margin-left: 5px;
+  }
 }
 
 .video__description {
@@ -30,6 +35,11 @@
   @media (min-width: consts.$tablet-width) {
     margin-left: 3px;
     margin-bottom: 90px;
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    margin-left: 6px;
+    margin-bottom: 88px;
   }
 }
 

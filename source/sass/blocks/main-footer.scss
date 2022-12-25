@@ -26,6 +26,10 @@
       margin-right: -9px;
     }
   }
+
+  @media (min-width: consts.$desktop-width) {
+    padding-right: 118px;
+  }
 }
 
 .main-footer__hashtag {

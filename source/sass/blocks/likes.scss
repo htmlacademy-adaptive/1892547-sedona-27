@@ -18,5 +18,9 @@
     @media (min-width: consts.$tablet-width) {
       left: 5px;
     }
+
+    @media (min-width: consts.$desktop-width) {
+      background-image: url("../../img/like-icon-desktop.svg");
+    }
   }
 }
