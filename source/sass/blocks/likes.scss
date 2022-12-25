@@ -1,4 +1,26 @@
+@use "../blocks/consts.scss";
+
 .likes__count {
+  position: relative;
   font-weight: 700;
-  margin-left: 37px;
+  padding-left: 37px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -4px;
+    background-image: url("../../img/like-icon.svg");
+    background-repeat: no-repeat;
+    width: 23px;
+    height: 21px;
+
+    @media (min-width: consts.$tablet-width) {
+      left: 5px;
+    }
+
+    @media (min-width: consts.$desktop-width) {
+      background-image: url("../../img/like-icon-desktop.svg");
+    }
+  }
 }

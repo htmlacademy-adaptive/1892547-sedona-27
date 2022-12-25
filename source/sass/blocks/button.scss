@@ -1,0 +1,14 @@
+@use "./consts.scss";
+
+.button {
+  border: none;
+  background-color: consts.$primary-color;
+  text-decoration: none;
+  color: consts.$secondary-text-color;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  cursor: pointer;
+}

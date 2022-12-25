@@ -2,36 +2,76 @@
 @use "../blocks/mixins.scss";
 
 .form-group__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
   margin: 0;
   padding: 0;
   list-style-type: none;
 
   @media (min-width: consts.$tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-
-    &--name,
-    &--contacts {
-      flex-direction: column;
+    .form__group--experience & {
+      padding: 0 36px;
+      flex-direction: row;
     }
 
-    &--attractions {
-      width: 480px;
+    .form__group--attractions & {
+      margin: 0 84px;
+      flex-direction: row;
+      column-gap: 32px;
     }
   }
 
   @media (min-width: consts.$desktop-width) {
-    &--attractions {
-      width: 100%;
+    .form__group--experience & {
+      justify-content: space-between;
+      column-gap: 28px;
+      padding: 0 53px;
+    }
+
+    .form__group--attractions & {
+      margin: 0 45px;
+      column-gap: 64px;
     }
   }
 }
 
 .form-group__item {
-  display: flex;
-  flex-direction: column;
+  min-width: 280px;
+
+  .form__group--attractions & {
+    min-width: 224px;
+  }
+
+  &--phone::after,
+  &--mail::after {
+    position: absolute;
+    content: "";
+    width: 58px;
+    height: 58px;
+    background-color: #e6e6e6;
+    margin-left: -58px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--phone::after {
+    background-image: url("../../img/phone.svg");
+  }
+
+  &--mail::after {
+    background-image: url("../../img/mail.svg");
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    .form__group--experience &,
+    .form__group--attractions & {
+      min-width: auto;
+    }
+  }
 }
+
 
 .form-group__title {
   @include mixins.large-text;
@@ -40,17 +80,148 @@
   color: consts.$title-color;
   text-transform: uppercase;
   margin-bottom: 20px;
+
+  @media (max-width: consts.$mobile-width-only) {
+    &::before {
+      position: absolute;
+      content: "";
+      top: -24px;
+      left: 0;
+      height: 1px;
+      width: 100vw;
+      margin: 0 calc(-50vw + 50%);
+      background-color: #e5e5e5;
+    }
+  }
+
+  @media (min-width: consts.$tablet-width) {
+    position: relative;
+    font-size: 21px;
+    margin-bottom: 28px;
+    width: 100%;
+
+    .form__group--name & {
+      margin-left: 81px;
+      text-align: start;
+    }
+
+    .form__group--contacts & {
+      margin-left: -17px;
+      text-align: start;
+    }
+
+    .form__group--experience & {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .form__group--experience &,
+    .form__group--attractions &,
+    .form__group--review & {
+      &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+        height: 1px;
+        width: 123px;
+        background-color: #dbdbdb;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: 0;
+        height: 1px;
+        width: 123px;
+        background-color: #dbdbdb;
+      }
+    }
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    .form__group--name & {
+      margin-left: 32px;
+      text-align: center;
+    }
+
+    .form__group--contacts & {
+      margin-left: 30px;
+    }
+
+    .form__group--experience & {
+      margin-bottom: 44px;
+    }
+
+    .form__group--attractions & {
+      margin-bottom: 61px;
+    }
+
+    .form__group--experience &,
+    .form__group--attractions &,
+    .form__group--review & {
+      &::before,
+      &::after {
+        width: 280px;
+      }
+    }
+  }
 }
 
 .form-group__label {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
   text-transform: uppercase;
+  cursor: pointer;
+
+  .form__wrapper & {
+    margin-left: 16px;
+  }
 }
 
 .form-group__input {
   @include mixins.large-text;
+  position: relative;
+  box-sizing: border-box;
+  width: 280px;
+  border: none;
   color: consts.$title-color;
   padding: 16px;
   background-color: #f2f2f2;
+
+  &[type="tel"],
+  &[type="email"] {
+    padding-right: 60px;
+  }
+
+  &--review {
+    resize: none;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 150px;
+    margin-bottom: 51px;
+
+    @media (min-width: consts.$tablet-width) {
+      min-height: 160px;
+      margin-bottom: 43px;
+    }
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    width: 430px;
+
+    &[type="tel"],
+    &[type="email"] {
+      width: 402px;
+    }
+
+    &--review {
+      width: 768px;
+      margin-bottom: 48px;
+    }
+  }
 }
 
 .form-group__name {
@@ -58,4 +229,43 @@
   text-transform: none;
   color: consts.$title-color;
   padding: 10px 0 10px 62px;
+}
+
+.form-group__mark {
+  position: absolute;
+  content: "";
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+
+  .form__group--experience & {
+    border-radius: 50%;
+  }
+
+  .form__group--attractions & {
+    border-radius: 4px;
+  }
+
+  .form-group__input[type="checkbox"]:checked + &::after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    left: 12px;
+    width: 22px;
+    height: 16px;
+    background-image: url("../../img/tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .form-group__input[type="radio"]:checked + &::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    left: calc(50% - 16px/2 + 0px);
+    top: calc(50% - 16px/2);
+    background-color: consts.$primary-text-color;
+    border-radius: 50%;
+  }
 }

@@ -1,4 +1,10 @@
+@use "../blocks/consts.scss";
+
 .main-map__image {
   display: block;
-  margin: 0 auto 10px;
+  margin: 0 auto 39px;
+
+  @media (min-width: consts.$tablet-width) {
+    margin-bottom: 36px;
+  }
 }
