@@ -3,19 +3,29 @@
 .order {
   text-transform: uppercase;
   text-align: center;
+  padding-top: 40px;
+  padding-bottom: 49px;
+
+  @media (min-width: consts.$tablet-width) {
+    padding-top: 61px;
+    padding-bottom: 58px;
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    padding-bottom: 67px;
+  }
 }
 
 .order__title {
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  margin: 40px 29px 20px;
+  margin: 0 29px 20px;
   padding: 0;
   color: consts.$title-color;
 
   @media (min-width: consts.$tablet-width) {
     font-size: 30px;
-    margin-top: 61px;
     margin-bottom: 30px;
   }
 }
@@ -42,15 +52,12 @@
   display: block;
   box-sizing: border-box;
   padding: 16px 49px;
-  margin: 0 18px 49px;
+  margin-right: 18px;
+  margin-left: 18px;
   max-width: 458px;
 
   @media (min-width: consts.$tablet-width) {
-    margin: 0 auto 58px;
+    margin: 0 auto;
     padding: 14.5px 121px 17.5px;
-  }
-
-  @media (min-width: consts.$desktop-width) {
-    margin-bottom: 67px;
   }
 }

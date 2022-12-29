@@ -5,6 +5,8 @@
   position: relative;
 
   @media (max-width: consts.$mobile-width-only) {
+    margin-top: 33px;
+
     &:last-child {
       margin-bottom: 46px;
     }
@@ -23,7 +25,7 @@
   }
 
   &--housing::before {
-    background-image: url("../../img/house-icon.svg");
+    background-image: url("../img/house-icon.svg");
 
     @media (min-width: consts.$tablet-width) {
       width: 77px;
@@ -39,7 +41,7 @@
   }
 
   &--food::before {
-    background-image: url("../../img/burger-icon.svg");
+    background-image: url("../img/burger-icon.svg");
 
     @media (min-width: consts.$tablet-width) {
       width: 81px;
@@ -55,7 +57,7 @@
   }
 
   &--souvenir::before {
-    background-image: url("../../img/gift-icon.svg");
+    background-image: url("../img/gift-icon.svg");
 
     @media (min-width: consts.$tablet-width) {
       width: 67px;
@@ -74,23 +76,16 @@
 
 .advantages__title {
   @include mixins.large-text;
-  margin-top: 33px;
+  margin-top: 0;
   margin-left: 65px;
   margin-bottom: 16px;
   padding: 0;
   color: consts.$title-color;
 
-  @media (max-width: consts.$mobile-width-only) {
-    .advantages__item--housing & {
-      margin-top: 33px;
-    }
-  }
-
   @media (min-width: consts.$tablet-width) {
     font-size: 21px;
     text-align: center;
     margin-bottom: 23px;
-    margin-top: 0;
     margin-right: 33px;
 
     .advantages__item--housing & {

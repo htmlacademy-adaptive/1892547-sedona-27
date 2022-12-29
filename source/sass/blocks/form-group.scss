@@ -57,11 +57,11 @@
   }
 
   &--phone::after {
-    background-image: url("../../img/phone.svg");
+    background-image: url("../img/phone.svg");
   }
 
   &--mail::after {
-    background-image: url("../../img/mail.svg");
+    background-image: url("../img/mail.svg");
   }
 
   @media (min-width: consts.$desktop-width) {
@@ -253,7 +253,7 @@
     left: 12px;
     width: 22px;
     height: 16px;
-    background-image: url("../../img/tick.svg");
+    background-image: url("../img/tick.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
