@@ -1140,7 +1140,7 @@
 
 .main-hero__image-container {
   position: relative;
-  background-image: url("/img/back-desktop.jpg");
+  background-image: url("../img/back-desktop.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
@@ -1426,7 +1426,7 @@
 .page-hero__image-container {
   position: relative;
   background-color: #81b3d3;
-  background-image: url("/img/back-desktop.jpg");
+  background-image: url("../img/back-desktop.jpg");
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 46% -320px;
