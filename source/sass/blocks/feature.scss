@@ -158,6 +158,7 @@
 .feature__image {
   display: block;
   margin: 0 auto;
+  width: auto;
 
   @media (min-width: consts.$tablet-width) {
     height: 256px;
