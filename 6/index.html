@@ -12,9 +12,9 @@
 <body class="page__body">
   <div class="page__container">
     <header class="main-header">
-      <a class="main-header__logo" href="index.html">
-        <img class="main-header__logo-img" src="img/header-logo.svg" alt="Логотип города Седона" width="195"
-          height="96">
+      <a class="main-header__logo " href="index.html">
+        <img class="main-header__logo-img main-header__logo-img--nojs" src="img/header-logo.svg"
+          alt="Логотип города Седона" width="195" height="96">
       </a>
       <nav class="main-header__nav nav nav--nojs nav--closed">
         <button class="nav__toggle" type="button">
@@ -69,8 +69,14 @@
                 <p class="feature__number">— №1 —</p>
                 <p class="feature__description">Cедона не аттракцион для туристов,<br> там течет своя жизнь</p>
               </div>
-              <img class="feature__image" src="img/photo-city@1x1.jpg" alt="Домики на фоне гор." width="320"
-                height="260">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-city.desktop.jpg 1x, img/photo-city.desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-city.tablet.jpg 1x, img/photo-city.tablet@2x.jpg 2x">
+                <img class="feature__image" src="img/photo-city.mobile.jpg" srcset="img/photo-city.mobile@2x.jpg 2x"
+                  alt="Домики на фоне гор." width="320" height="260">
+              </picture>
               <ul class="feature__advantages-list advantages">
                 <li class="advantages__item advantages__item--housing">
                   <h3 class="advantages__title">Жилье</h3>
@@ -98,8 +104,15 @@
                 <p class="feature__number">— №2 —</p>
                 <p class="feature__description">Да, по нему можно пройти!<br> Если вы осмелитесь, конечно</p>
               </div>
-              <img class="feature__image" src="img/photo-bridge@1x1.jpg" alt="Каньон, горы, снова горы." width="320"
-                height="260">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-bridge.desktop.jpg 1x, img/photo-bridge.desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-bridge.tablet.jpg 1x, img/photo-bridge.tablet@2x.jpg 2x">
+                <img class="feature__image" src="img/photo-bridge.mobile.jpg" srcset="img/photo-bridge.mobile@2x.jpg 2x"
+                  alt="Каньон, горы, снова горы." width="320" height="260">
+              </picture>
+
             </li>
             <li class="features__item features__item--square feature">
               <div class="feature__text-block">
@@ -136,7 +149,18 @@
 
       <section class="main-map">
         <h2 class="visually-hidden">Карта.</h2>
-        <img class="main-map__image" src="img/map-mobile.jpg" alt="Седона на карте" width="320" height="350">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d837343.0092593139!2d-112.18704181573729!3d34.93476883319412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1672411949448!5m2!1sru!2sru"
+          width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
+            <img class="main-map__image" src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x"
+              alt="Седона на карте" width="320" height="350">
+          </picture>
+
+        </iframe>
       </section>
     </main>
 
