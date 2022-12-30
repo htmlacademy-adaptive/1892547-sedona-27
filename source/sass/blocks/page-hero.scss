@@ -7,10 +7,32 @@
 .page-hero__image-container {
   position: relative;
   background-color: #81b3d3;
-  background-image: url("../img/back-desktop.jpg");
+  background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
-  background-size: auto;
-  background-position: 46% -320px;
+  background-size: cover;
+  background-position: 50% 100%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile@2x.jpg");
+  }
+
+  @media (min-width: consts.$tablet-width) {
+    background-image: url("../img/back-tablet.jpg");
+    background-position: 50% -225px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    background-image: url("../img/back-desktop.jpg");
+    background-position: 50% -217px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop@2x.jpg");
+    }
+  }
 
   &::before {
     position: absolute;
@@ -29,14 +51,6 @@
       background-size: auto;
       object-fit: contain;
     }
-  }
-
-  @media (min-width: consts.$tablet-width) {
-    background-position: 50% -225px;
-  }
-
-  @media (min-width: consts.$desktop-width) {
-    background-position: 50% -217px;
   }
 }
 
