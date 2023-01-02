@@ -45,9 +45,4 @@
 
 .video__content {
   text-align: center;
-
-  @media (min-width: consts.$tablet-width) {
-    width: 648px;
-    height: 500px;
-  }
 }

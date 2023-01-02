@@ -57,7 +57,7 @@
   padding: 28px 30px;
   cursor: pointer;
   background: none;
-  background-image: url("../../img/icon-menu--closed.svg");
+  background-image: url("../img/icon-menu--closed.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: 0;
@@ -68,7 +68,7 @@
 }
 
 .nav--opened .nav__toggle {
-  background-image: url("../../img/icon-cross--opened.svg");
+  background-image: url("../img/icon-cross--opened.svg");
 }
 
 .nav--nojs .nav__toggle {

@@ -5,15 +5,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon-32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/favicon-152.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
   <div class="page__container">
     <header class="main-header">
-      <a class="main-header__logo" href="index.html">
-        <img class="main-header__logo-img" src="img/header-logo.svg" alt="Логотип города Седона" width="195"
-          height="96">
+      <a class="main-header__logo " href="index.html">
+        <img class="main-header__logo-img main-header__logo-img--nojs" src="img/header-logo.svg"
+          alt="Логотип города Седона" width="195" height="96">
       </a>
       <nav class="main-header__nav nav nav--nojs nav--closed">
         <button class="nav__toggle" type="button">
@@ -65,8 +69,15 @@
           </div>
           <ul class="photos__list">
             <li class="photos__item card">
-              <img class="card__image" src="img/photo-1-mobile.jpg" alt="Дорога ведущая в закат." width="280"
-                height="280">
+              <a class="card__link" href="#">
+                <picture>
+                  <source media="(min-width: 1200px)"
+                    srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                  <img class="card__image" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x"
+                    alt="Дорога ведущая в закат." width="280" height="280">
+                </picture>
+              </a>
               <div class="card__wrapper">
                 <div class="card__caption">
                   <p class="card__title">Неродные просторы</p>
@@ -79,7 +90,16 @@
               </div>
             </li>
             <li class="photos__item card">
-              <img class="card__image" src="img/photo-2-mobile.jpg" alt="Кактусы на фоне гор." width="280" height="280">
+              <a class="card__link" href="#">
+                <picture>
+                  <source media="(min-width: 1200px)"
+                    srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+                  <img class="card__image" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x"
+                    alt="Кактусы на фоне гор." width="280" height="280">
+                </picture>
+              </a>
+
               <div class="card__wrapper">
                 <div class="card__caption">
                   <p class="card__title">Местная растительность</p>
@@ -92,7 +112,15 @@
               </div>
             </li>
             <li class="photos__item card">
-              <img class="card__image" src="img/photo-3-mobile.jpg" alt="Серпантин в лесу." width="280" height="280">
+              <a class="card__link" href="#">
+                <picture>
+                  <source media="(min-width: 1200px)"
+                    srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                  <img class="card__image" src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x"
+                    alt="Серпантин в лесу." width="280" height="280">
+                </picture>
+              </a>
               <div class="card__wrapper">
                 <div class="card__caption">
                   <p class="card__title">Дорога на север</p>
@@ -105,8 +133,15 @@
               </div>
             </li>
             <li class="photos__item card">
-              <img class="card__image" src="img/photo-4-desktop-1.jpg" alt="Каньон, горы, снова горы." width="280"
-                height="280">
+              <a class="card__link" href="#">
+                <picture>
+                  <source media="(min-width: 1200px)"
+                    srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+                  <img class="card__image" src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2x.jpg 2x"
+                    alt="Каньон, горы, снова горы." width="280" height="280">
+                </picture>
+              </a>
               <div class="card__wrapper">
                 <div class="card__caption">
                   <p class="card__title">Мост дьявола</p>
@@ -128,8 +163,13 @@
             Смотрите видеопрезентацию и скорее за билетами, пока они<br> не подорожали в очередной раз!
           </p>
           <div class="video__content content">
-            <img class="content__image" src="img/video-mobile.jpg" alt="Автомобили на дороге на фоне гор." width="280"
-              height="177">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img class="content__image" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x"
+                alt="Автомобили на дороге на фоне гор." width="280" height="177">
+            </picture>
+            <button class="content__button" type="button"></button>
           </div>
         </section>
       </div>

@@ -3,6 +3,15 @@
 
 .features {
   text-transform: uppercase;
+  padding-top: 34px;
+
+  @media (min-width: consts.$tablet-width) {
+    padding-top: 48px;
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    padding-top: 60px;
+  }
 }
 
 .features__wrapper {
@@ -45,24 +54,25 @@
   @media (min-width: consts.$tablet-width) {
     display: grid;
 
-    &--second .feature__image {
+    &--bridge .feature__image {
       order: 1;
     }
 
-    &--second .feature__text-block {
+    &--bridge .feature__text-block {
       order: 2;
+      grid-column: 3/4;
     }
 
-    &--first,
-    &--second {
+    &--city,
+    &--bridge {
       grid-column: 1 / 4;
       grid-template-columns: 256px 256px 256px;
     }
   }
 
   @media (min-width: consts.$desktop-width) {
-    &--first,
-    &--second {
+    &--city,
+    &--bridge {
       grid-column: 1 / 4;
       grid-template-columns: 400px 400px 400px;
     }
@@ -73,21 +83,16 @@
   @include mixins.large-text;
   text-align: center;
   color: consts.$title-color;
-  margin-top: 34px;
+  margin-top: 0;
   margin-bottom: 35px;
 
   @media (min-width: consts.$tablet-width) {
     font-size: 21px;
-    margin-top: 48px;
     margin-bottom: 29px;
 
     br:first-child {
       display: none;
     }
-  }
-
-  @media (min-width: consts.$desktop-width) {
-    margin-top: 60px;
   }
 }
 
