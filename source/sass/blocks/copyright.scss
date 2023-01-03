@@ -5,16 +5,15 @@
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
+  color: consts.$title-color;
 }
 
 .copyright__text {
   text-decoration: none;
-  color: consts.$title-color;
   text-transform: uppercase;
 }
 
 .copyright__logo {
-  fill: consts.$title-color;
   width: 26.9px;
   height: 34.1px;
 }
