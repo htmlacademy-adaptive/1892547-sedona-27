@@ -53,15 +53,16 @@
     background-color: #e6e6e6;
     margin-left: -58px;
     background-repeat: no-repeat;
-    background-position: center;
   }
 
   &--phone::after {
-    background-image: url("../img/phone.svg");
+    background-image: url("../img/sprite.svg#phone");
+    background-position: 19px 20px;
   }
 
   &--mail::after {
-    background-image: url("../img/mail.svg");
+    background-image: url("../img/sprite.svg#mail");
+    background-position: 20px 23px;
   }
 
   @media (min-width: consts.$desktop-width) {
@@ -86,10 +87,9 @@
       position: absolute;
       content: "";
       top: -24px;
-      left: 0;
+      left: -20px;
       height: 1px;
-      width: 100vw;
-      margin: 0 calc(-50vw + 50%);
+      width: 320px;
       background-color: #e5e5e5;
     }
   }
@@ -253,7 +253,7 @@
     left: 12px;
     width: 22px;
     height: 16px;
-    background-image: url("../img/tick.svg");
+    background-image: url("../img/sprite.svg#tick");
     background-repeat: no-repeat;
     background-position: center;
   }
