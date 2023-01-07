@@ -59,7 +59,8 @@
   background: none;
   background-image: url("../img/sprite.svg#icon-menu--closed");
   background-repeat: no-repeat;
-  background-position: 17px 17px;
+  background-position: center;
+  background-size: 23px 22px;
   border: 0;
 
   @media (min-width: consts.$tablet-width) {

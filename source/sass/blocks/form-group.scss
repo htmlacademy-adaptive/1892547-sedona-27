@@ -53,16 +53,17 @@
     background-color: #e6e6e6;
     margin-left: -58px;
     background-repeat: no-repeat;
+    background-position: center;
   }
 
   &--phone::after {
     background-image: url("../img/sprite.svg#phone");
-    background-position: 19px 20px;
+    background-size: 18px;
   }
 
   &--mail::after {
     background-image: url("../img/sprite.svg#mail");
-    background-position: 20px 23px;
+    background-size: 16px 12px;
   }
 
   @media (min-width: consts.$desktop-width) {
