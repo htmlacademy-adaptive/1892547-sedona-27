@@ -25,7 +25,7 @@
   }
 
   &--housing::before {
-    background-image: url("../img/house-icon.svg");
+    background-image: url("../img/sprite.svg#house-icon");
 
     @media (min-width: consts.$tablet-width) {
       width: 77px;
@@ -41,7 +41,8 @@
   }
 
   &--food::before {
-    background-image: url("../img/burger-icon.svg");
+    background-image: url("../img/sprite.svg#burger-icon");
+    background-size: contain;
 
     @media (min-width: consts.$tablet-width) {
       width: 81px;
@@ -57,7 +58,7 @@
   }
 
   &--souvenir::before {
-    background-image: url("../img/gift-icon.svg");
+    background-image: url("../img/sprite.svg#gift-icon");
 
     @media (min-width: consts.$tablet-width) {
       width: 67px;

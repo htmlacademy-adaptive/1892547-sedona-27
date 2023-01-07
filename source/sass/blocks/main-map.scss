@@ -1,14 +1,30 @@
 @use "../blocks/consts.scss";
 
 .main-map {
-  padding-bottom: 39px;
+  padding-bottom: 34px;
+  background-image: url("../img/map-mobile.jpg");
+  background-repeat: no-repeat;
+  min-height: 350px;
+  width: 100%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-mobile@2x.jpg");
+  }
 
   @media (min-width: consts.$tablet-width) {
-    padding-bottom: 36px;
-  }
-}
+    padding-bottom: 30px;
+    background-image: url("../img/map-tablet.jpg");
 
-.main-map__image {
-  display: block;
-  margin: 0 auto;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    background-image: url("../img/map-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-desktop@2x.jpg");
+    }
+  }
 }
