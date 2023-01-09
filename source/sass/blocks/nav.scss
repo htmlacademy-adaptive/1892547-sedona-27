@@ -63,6 +63,14 @@
   background-size: 23px 22px;
   border: 0;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: consts.$tablet-width) {
     display: none;
   }

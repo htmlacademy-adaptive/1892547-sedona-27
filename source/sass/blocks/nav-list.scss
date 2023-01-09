@@ -39,6 +39,12 @@
     border-bottom: none;
   }
 
+  @media (max-width: consts.$mobile-width-only) {
+    &:hover {
+      background-color: consts.$primary-color-hover;
+    }
+  }
+
   @media (min-width: consts.$tablet-width) {
     display: block;
     min-width: 153px;
@@ -66,12 +72,27 @@
   color: consts.$secondary-text-color;
   padding: 6px 90px;
 
+  @media (max-width: consts.$mobile-width-only) {
+    &:active {
+      color: rgba(consts.$secondary-text-color, 0.3);
+    }
+  }
+
   @media (min-width: consts.$tablet-width) {
     color: consts.$title-color;
     padding: 18px 20px;
 
     &--current {
+      pointer-events: none;
       color: #766357;
+    }
+
+    &:hover {
+      color: consts.$primary-color;
+    }
+
+    &:active {
+      color: rgba(#766357, 0.3);
     }
   }
 }

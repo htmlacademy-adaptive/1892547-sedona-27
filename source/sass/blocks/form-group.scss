@@ -192,6 +192,17 @@
   padding: 16px;
   background-color: #f2f2f2;
 
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  .form__group--name &:focus-visible,
+  .form__group--contacts &:focus-visible {
+    outline: 4px solid #e5e5e5;
+    outline-offset: -4px;
+    background: #ffffff;
+  }
+
   &[type="tel"],
   &[type="email"] {
     padding-right: 60px;
@@ -239,12 +250,26 @@
   height: 46px;
   background-color: #f2f2f2;
 
+  .form-group__label:hover & {
+    background-color: #e5e5e5;
+  }
+
+  .form-group__label:active & {
+    background-color: #d5d5d5;
+  }
+
   .form__group--experience & {
     border-radius: 50%;
   }
 
   .form__group--attractions & {
     border-radius: 4px;
+  }
+
+  .form-group__input[type="radio"]:focus-visible + &,
+  .form-group__input[type="checkbox"]:focus-visible + & {
+    background-color: #d5d5d5;
+    outline: -webkit-focus-ring-color auto 1px;
   }
 
   .form-group__input[type="checkbox"]:checked + &::after {
@@ -257,6 +282,10 @@
     background-image: url("../img/sprite.svg#tick");
     background-repeat: no-repeat;
     background-position: center;
+
+    .form-group__label:active & {
+      opacity: 0.3;
+    }
   }
 
   .form-group__input[type="radio"]:checked + &::after {
@@ -268,5 +297,9 @@
     top: calc(50% - 16px/2);
     background-color: consts.$primary-text-color;
     border-radius: 50%;
+
+    .form-group__label:active & {
+      opacity: 0.3;
+    }
   }
 }
