@@ -43,7 +43,8 @@
 @media (max-width: consts.$mobile-width-only) {
   .nav--opened .nav-list__item,
   .nav--nojs .nav-list__item {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
 
