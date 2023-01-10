@@ -54,7 +54,7 @@
     margin-left: 25px;
     margin-top: 0;
 
-    .photos__item:first-child & {
+    .card:first-child & {
       margin-top: 5px;
       margin-left: 21px;
     }
@@ -69,7 +69,7 @@
   @media (min-width: consts.$desktop-width) {
     padding-bottom: 5px;
 
-    .photos__item:first-child & {
+    .card:first-child & {
       padding-bottom: 0;
     }
   }

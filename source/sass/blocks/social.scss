@@ -15,17 +15,19 @@
   background-color: consts.$primary-color;
   width: 48px;
   height: 48px;
-
-  &:hover {
-    background-color: consts.$primary-color-hover;
-  }
 }
 
 .social__link {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 17px 12px;
+  width: 100%;
+  height: 100%;
+
+  &:hover,
+  &:focus-visible {
+    background-color: consts.$primary-color-hover;
+  }
 
   &:active .social__logo {
     opacity: 0.3;

@@ -12,7 +12,8 @@
   text-transform: uppercase;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background-color: consts.$primary-color-hover;
   }
 
