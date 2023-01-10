@@ -1,0 +1,113 @@
+@use "../blocks/mixins.scss";
+@use "../blocks/consts.scss";
+
+.modal {
+  background-color: #ffffff;
+  text-align: center;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+  &--closed {
+    display: none;
+  }
+
+  @media (min-width: consts.$tablet-width) {
+    &--error {
+      width: 400px;
+    }
+
+    &--success {
+      width: 640px;
+    }
+  }
+}
+
+.modal__title {
+  @include mixins.large-text;
+  text-transform: uppercase;
+  margin: 0;
+  color: consts.$title-color;
+  margin-bottom: 26px;
+  margin-top: 44px;
+  padding-right: 42px;
+  padding-left: 41px;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: consts.$tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+    margin-top: 48px;
+    margin-bottom: 22px;
+
+    br {
+      display: inline;
+    }
+
+    .modal--success & {
+      margin-top: 45px;
+    }
+  }
+}
+
+.modal__description {
+  margin: 0;
+  text-transform: uppercase;
+  color: consts.$primary-text-color;
+  margin-bottom: 28px;
+
+  .modal--error & {
+    padding-right: 42px;
+    padding-left: 41px;
+  }
+
+  .modal--success & {
+    padding-right: 39px;
+    padding-left: 37px;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: consts.$tablet-width) {
+    margin-bottom: 47px;
+
+    .modal--success & {
+      margin-bottom: 52px;
+    }
+  }
+}
+
+.modal__button-wrapper {
+  background-color: #f2f2f2;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: consts.$tablet-width) {
+    padding-left: 91px;
+    padding-right: 91px;
+  }
+}
+
+.modal__button {
+  font-size: 18px;
+  padding: 18px 64px 14px 63px;
+  margin-bottom: 35px;
+  margin-left: 70px;
+  margin-right: 70px;
+
+  .modal--success & {
+    margin: 20px 0 20px;
+    width: 100%;
+  }
+
+  @media (min-width: consts.$tablet-width) {
+    font-size: 21px;
+    margin-left: 65px;
+    margin-right: 65px;
+    margin-bottom: 50px;
+
+    .modal--success & {
+      margin: 44px 0 44px;
+    }
+  }
+}
