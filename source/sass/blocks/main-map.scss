@@ -1,10 +1,10 @@
 @use "../blocks/consts.scss";
 
 .main-map {
-  margin-bottom: 34px;
+  margin-bottom: 40px;
   background-image: url("../img/map-mobile.jpg");
   background-repeat: no-repeat;
-  min-height: 350px;
+  height: 350px;
   width: 100%;
 
   @media (min-resolution: 2dppx) {
