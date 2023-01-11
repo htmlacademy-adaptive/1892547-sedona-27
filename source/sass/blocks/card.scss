@@ -32,6 +32,8 @@
 .card__image {
   display: block;
   margin-bottom: 14.5px;
+  width: 100%;
+  object-fit: cover;
 
   @media (min-width: consts.$tablet-width) {
     width: 100%;

@@ -41,7 +41,7 @@
   @include mixins.large-text;
   position: relative;
   box-sizing: border-box;
-  width: 280px;
+  width: 100%;
   border: none;
   color: consts.$title-color;
   padding: 16px;
