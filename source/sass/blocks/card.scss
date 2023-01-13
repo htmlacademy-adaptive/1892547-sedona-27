@@ -33,7 +33,12 @@
   display: block;
   margin-bottom: 14.5px;
   width: 100%;
+  height: auto;
   object-fit: cover;
+
+  @media (max-width: consts.$mobile-width-only) {
+    min-height: 267px;
+  }
 
   @media (min-width: consts.$tablet-width) {
     width: 100%;

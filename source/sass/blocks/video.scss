@@ -24,12 +24,12 @@
 .video__description {
   text-align: center;
   text-transform: uppercase;
-  margin: 0 6px 38px 8px;
+  margin: 0 auto 38px;
+  max-width: 445px;
 
   @media (max-width: consts.$mobile-width-only) {
-    br {
-      display: none;
-    }
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   @media (min-width: consts.$tablet-width) {
