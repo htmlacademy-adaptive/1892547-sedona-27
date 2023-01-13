@@ -1,0 +1,142 @@
+@use "../blocks/mixins.scss";
+@use "../blocks/consts.scss";
+
+.form-item {
+  &--phone::after,
+  &--mail::after {
+    position: absolute;
+    content: "";
+    width: 58px;
+    height: 58px;
+    background-color: #e6e6e6;
+    margin-left: -58px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--phone::after {
+    background-image: url("../img/sprite.svg#phone");
+    background-size: 18px;
+  }
+
+  &--mail::after {
+    background-image: url("../img/sprite.svg#mail");
+    background-size: 16px 12px;
+  }
+}
+
+.form-item__label {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  .form__wrapper & {
+    margin-left: 16px;
+  }
+}
+
+.form-item__input {
+  @include mixins.large-text;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+  color: consts.$title-color;
+  padding: 16px;
+  background-color: #f2f2f2;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  .form__group--name &:focus-visible,
+  .form__group--contacts &:focus-visible {
+    outline: 4px solid #e5e5e5;
+    outline-offset: -4px;
+    background: #ffffff;
+  }
+
+  &[type="tel"],
+  &[type="email"] {
+    padding-right: 60px;
+  }
+
+  @media (min-width: consts.$desktop-width) {
+    width: 430px;
+
+    &[type="tel"],
+    &[type="email"] {
+      width: 402px;
+    }
+  }
+}
+
+.form-item__name {
+  @include mixins.large-text;
+  text-transform: none;
+  color: consts.$title-color;
+  padding: 10px 0 10px 62px;
+}
+
+.form-item__mark {
+  position: absolute;
+  content: "";
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+
+  .form-item__label:hover & {
+    background-color: #e5e5e5;
+  }
+
+  .form-item__label:active & {
+    background-color: #d5d5d5;
+  }
+
+  .form__group--experience & {
+    border-radius: 50%;
+  }
+
+  .form__group--attractions & {
+    border-radius: 4px;
+  }
+
+  .form-item__input[type="radio"]:focus-visible + &,
+  .form-item__input[type="checkbox"]:focus-visible + & {
+    background-color: #d5d5d5;
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+
+  .form-item__input[type="checkbox"]:checked + &::after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    left: 12px;
+    width: 22px;
+    height: 16px;
+    background-image: url("../img/sprite.svg#tick");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .form-item__label:active & {
+      opacity: 0.3;
+    }
+  }
+
+  .form-item__input[type="radio"]:checked + &::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    left: calc(50% - 16px/2 + 0px);
+    top: calc(50% - 16px/2);
+    background-color: consts.$primary-text-color;
+    border-radius: 50%;
+
+    .form-item__label:active & {
+      opacity: 0.3;
+    }
+  }
+}

@@ -11,4 +11,18 @@
   line-height: 26px;
   text-transform: uppercase;
   cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background-color: consts.$primary-color-hover;
+  }
+
+  &:active {
+    color: rgba(consts.$secondary-text-color, 0.3);
+  }
+
+  &--disabled {
+    pointer-events: none;
+    background-color: #e5e5e5;
+  }
 }

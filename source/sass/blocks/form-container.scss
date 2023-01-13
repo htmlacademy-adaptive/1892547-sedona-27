@@ -4,6 +4,11 @@
 .form-container {
   margin-top: 36px;
 
+  @media (max-width: consts.$mobile-width-only) {
+    max-width: calc(consts.$tablet-width - consts.$resolution-gap);
+    padding-bottom: 0;
+  }
+
   @media (min-width: consts.$tablet-width) {
     margin-top: 64px;
     margin-bottom: 46px;
@@ -12,10 +17,6 @@
   @media (min-width: consts.$desktop-width) {
     margin-top: 115px;
   }
-}
-
-.form-container__form {
-  max-width: 960px;
 }
 
 .form-container__title {
@@ -52,7 +53,7 @@
     margin-bottom: 71px;
   }
 
-  @media (max-width: consts.$mobile-width-only) {
+  @media (max-width: 480px) {
     br {
       display: none;
     }

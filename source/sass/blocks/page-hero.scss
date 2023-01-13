@@ -16,18 +16,16 @@
     background-image: url("../img/back-mobile@2x.jpg");
   }
 
-  @media (min-width: consts.$tablet-width) {
+  @media (min-width: consts.$mobile-width + 100px) {
     background-image: url("../img/back-tablet.jpg");
-    background-position: 50% -225px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/back-tablet@2x.jpg");
     }
   }
 
-  @media (min-width: consts.$desktop-width) {
+  @media (min-width: consts.$tablet-width + consts.$resolution-gap) {
     background-image: url("../img/back-desktop.jpg");
-    background-position: 50% -217px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/back-desktop@2x.jpg");
@@ -39,18 +37,13 @@
     width: 100%;
     height: 57px;
     content: "";
-    background-image: url("../img/intro-mobile-triangle.svg");
+    background-image: url("../img/intro-triangle.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
-    bottom: -1px;
+    background-size: auto;
+    object-fit: contain;
+    bottom: 0;
     left: 0;
-
-    @media (min-width: consts.$tablet-width) {
-      background-image: url("../img/intro-triangle.svg");
-      background-size: auto;
-      object-fit: contain;
-    }
   }
 }
 
@@ -60,6 +53,10 @@
   padding-top: 52px;
   padding-bottom: 67px;
   color: #ffffff;
+  height: 12vw;
+  width: 71vw;
+  max-width: 457px;
+  max-height: 77px;
 
   @media (min-width: consts.$tablet-width) {
     padding-top: 95px;

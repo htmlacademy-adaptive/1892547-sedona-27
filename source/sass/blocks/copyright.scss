@@ -6,6 +6,15 @@
   justify-content: space-between;
   text-decoration: none;
   color: consts.$title-color;
+
+  &:hover,
+  &:focus-visible {
+    color: consts.$primary-color;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
 }
 
 .copyright__text {

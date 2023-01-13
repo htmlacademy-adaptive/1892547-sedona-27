@@ -8,6 +8,7 @@
 @use "./blocks/feature.scss";
 @use "./blocks/features.scss";
 @use "./blocks/form-group.scss";
+@use "./blocks/form-item.scss";
 @use "./blocks/form.scss";
 @use "./blocks/hashtag.scss";
 @use "./blocks/likes.scss";
@@ -26,3 +27,5 @@
 @use "./blocks/social.scss";
 @use "./blocks/video.scss";
 @use "./blocks/visually-hidden.scss";
+@use "./blocks/modal-wrapper.scss";
+@use "./blocks/modal.scss";

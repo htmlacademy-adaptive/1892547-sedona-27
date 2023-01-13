@@ -44,28 +44,6 @@
     min-width: 224px;
   }
 
-  &--phone::after,
-  &--mail::after {
-    position: absolute;
-    content: "";
-    width: 58px;
-    height: 58px;
-    background-color: #e6e6e6;
-    margin-left: -58px;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  &--phone::after {
-    background-image: url("../img/sprite.svg#phone");
-    background-size: 18px;
-  }
-
-  &--mail::after {
-    background-image: url("../img/sprite.svg#mail");
-    background-size: 16px 12px;
-  }
-
   @media (min-width: consts.$desktop-width) {
     .form__group--experience &,
     .form__group--attractions & {
@@ -73,7 +51,6 @@
     }
   }
 }
-
 
 .form-group__title {
   @include mixins.large-text;
@@ -88,9 +65,10 @@
       position: absolute;
       content: "";
       top: -24px;
-      left: -20px;
+      left: 0;
       height: 1px;
-      width: 320px;
+      width: 100vw;
+      margin: 0 calc(-50vw + 50%);
       background-color: #e5e5e5;
     }
   }
@@ -170,103 +148,35 @@
   }
 }
 
-.form-group__label {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  text-transform: uppercase;
-  cursor: pointer;
-
-  .form__wrapper & {
-    margin-left: 16px;
-  }
-}
-
-.form-group__input {
+.form-group__review {
   @include mixins.large-text;
-  position: relative;
-  box-sizing: border-box;
-  width: 280px;
+  resize: none;
   border: none;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 150px;
+  margin-bottom: 51px;
   color: consts.$title-color;
   padding: 16px;
   background-color: #f2f2f2;
 
-  &[type="tel"],
-  &[type="email"] {
-    padding-right: 60px;
+  &:hover {
+    background-color: #e5e5e5;
   }
 
-  &--review {
-    resize: none;
-    box-sizing: border-box;
-    width: 100%;
-    min-height: 150px;
-    margin-bottom: 51px;
+  &:focus-visible {
+    outline: 4px solid #e5e5e5;
+    outline-offset: -4px;
+    background: #ffffff;
+  }
 
-    @media (min-width: consts.$tablet-width) {
-      min-height: 160px;
-      margin-bottom: 43px;
-    }
+  @media (min-width: consts.$tablet-width) {
+    min-height: 160px;
+    margin-bottom: 43px;
   }
 
   @media (min-width: consts.$desktop-width) {
-    width: 430px;
-
-    &[type="tel"],
-    &[type="email"] {
-      width: 402px;
-    }
-
-    &--review {
-      width: 768px;
-      margin-bottom: 48px;
-    }
-  }
-}
-
-.form-group__name {
-  @include mixins.large-text;
-  text-transform: none;
-  color: consts.$title-color;
-  padding: 10px 0 10px 62px;
-}
-
-.form-group__mark {
-  position: absolute;
-  content: "";
-  width: 46px;
-  height: 46px;
-  background-color: #f2f2f2;
-
-  .form__group--experience & {
-    border-radius: 50%;
-  }
-
-  .form__group--attractions & {
-    border-radius: 4px;
-  }
-
-  .form-group__input[type="checkbox"]:checked + &::after {
-    position: absolute;
-    content: "";
-    top: 14px;
-    left: 12px;
-    width: 22px;
-    height: 16px;
-    background-image: url("../img/sprite.svg#tick");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .form-group__input[type="radio"]:checked + &::after {
-    position: absolute;
-    content: "";
-    width: 16px;
-    height: 16px;
-    left: calc(50% - 16px/2 + 0px);
-    top: calc(50% - 16px/2);
-    background-color: consts.$primary-text-color;
-    border-radius: 50%;
+    width: 768px;
+    margin-bottom: 48px;
   }
 }

@@ -38,7 +38,8 @@
         background-image: url("../img/features-mobile-triangle.svg");
         background-repeat: no-repeat;
         background-position: center;
-        background-size: cover;
+        background-size: auto;
+        object-fit: contain;
         top: -1px;
         left: 0;
       }
@@ -159,6 +160,11 @@
   display: block;
   margin: 0 auto;
   width: auto;
+
+  @media (max-width: consts.$mobile-width-only) {
+    width: 100%;
+    object-fit: cover;
+  }
 
   @media (min-width: consts.$tablet-width) {
     height: 256px;
