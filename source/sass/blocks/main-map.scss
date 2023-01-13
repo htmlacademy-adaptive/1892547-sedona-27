@@ -13,7 +13,7 @@
   }
 
   @media (min-width: consts.$tablet-width) {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
     background-image: url("../img/map-tablet.jpg");
 
     @media (min-resolution: 2dppx) {
