@@ -13,7 +13,7 @@
   }
 
   @media (min-width: consts.$tablet-width) {
-    margin-bottom: 30px;
+    margin-bottom: 37px;
     background-image: url("../img/map-tablet.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -22,6 +22,7 @@
   }
 
   @media (min-width: consts.$desktop-width) {
+
     background-image: url("../img/map-desktop.jpg");
 
     @media (min-resolution: 2dppx) {

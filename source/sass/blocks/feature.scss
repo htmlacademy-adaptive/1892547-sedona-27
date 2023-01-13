@@ -15,20 +15,20 @@
 
 .feature__text-block {
   background-color: #eeeeee;
-  padding: 24px 26px;
+  padding: 24px 32px;
   text-align: center;
 
   &--accent {
     background-color: consts.$primary-color;
     color: consts.$secondary-text-color;
-    padding: 37px 18px;
+    padding: 37px 28px;
   }
 
   @media (max-width: consts.$mobile-width-only) {
     .features__item--city & {
       position: relative;
       padding-top: 70px;
-      padding-bottom: 40px;
+      padding-bottom: 38px;
 
       &::before {
         position: absolute;
@@ -100,6 +100,7 @@
 
 .feature__description {
   margin: 0;
+  min-height: 42px;
 
   .features__item--city & {
     br {
@@ -114,7 +115,7 @@
   }
 
   .features__item--bridge & {
-    @media (max-width: consts.$desktop-width - 1px) {
+    @media (max-width: consts.$desktop-width - consts.$resolution-gap) {
       br {
         display: none;
       }
@@ -123,33 +124,19 @@
 
   .features__item--road & {
     @media (max-width: consts.$mobile-width-only) {
-      br:nth-child(2) {
-        display: none;
-      }
-    }
-
-    @media (min-width: consts.$tablet-width) {
-      br:nth-child(1) {
+      br {
         display: none;
       }
     }
   }
 
   .features__item--tourists & {
-    @media (max-width: consts.$mobile-width-only) {
-      br:nth-child(2) {
-        display: none;
-      }
-    }
-
-    @media (min-width: consts.$tablet-width) {
-      br {
-        display: none;
-      }
+    br {
+      display: none;
     }
 
     @media (min-width: consts.$desktop-width) {
-      br:nth-child(2) {
+      br {
         display: inline;
       }
     }
