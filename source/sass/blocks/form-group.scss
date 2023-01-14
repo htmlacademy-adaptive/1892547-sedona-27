@@ -25,9 +25,11 @@
 
   @media (min-width: consts.$desktop-width) {
     .form__group--experience & {
-      justify-content: space-between;
-      column-gap: 28px;
-      padding: 0 53px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 58px;
+      padding-left: 53px;
+      padding-right: 43px;
     }
 
     .form__group--attractions & {
@@ -103,7 +105,7 @@
         top: 50%;
         left: 0;
         height: 1px;
-        width: 123px;
+        width: 19%;
         background-color: #dbdbdb;
       }
 
@@ -113,7 +115,7 @@
         top: 50%;
         right: 0;
         height: 1px;
-        width: 123px;
+        width: 19%;
         background-color: #dbdbdb;
       }
     }

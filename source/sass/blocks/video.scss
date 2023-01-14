@@ -1,6 +1,13 @@
 @use "../blocks/consts.scss";
 @use "../blocks/mixins.scss";
 
+.video {
+  @media (min-width: consts.$desktop-width) {
+    width: 800px;
+    margin: 0 auto;
+  }
+}
+
 .video__title {
   @include mixins.large-text;
   text-align: center;
