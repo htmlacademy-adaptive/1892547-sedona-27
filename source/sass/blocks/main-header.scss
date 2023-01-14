@@ -15,9 +15,11 @@
   z-index: 1;
 
   &--nojs {
-    position: static;
-    margin-left: auto;
-    margin-right: auto;
+    @media (max-width: consts.$mobile-width-only) {
+      position: static;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   @media (min-width: consts.$tablet-width) {
