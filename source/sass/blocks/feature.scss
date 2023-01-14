@@ -14,7 +14,6 @@
 }
 
 .feature__text-block {
-  background-color: #eeeeee;
   padding: 24px 32px;
   text-align: center;
 
@@ -143,25 +142,20 @@
   }
 }
 
+.feature__image-wrapper {
+  .features__item--city & {
+    grid-column: 2 / 4;
+  }
+
+  .features__item--bridge & {
+    grid-column: 1 / 3;
+  }
+}
+
 .feature__image {
   display: block;
   margin: 0 auto;
-  width: auto;
-
-  @media (max-width: consts.$mobile-width-only) {
-    width: 100%;
-    object-fit: cover;
-  }
-
-  @media (min-width: consts.$tablet-width) {
-    height: 256px;
-
-    .features__item--city & {
-      grid-column: 2 / 4;
-    }
-
-    .features__item--bridge & {
-      grid-column: 1 / 3;
-    }
-  }
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

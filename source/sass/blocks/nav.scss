@@ -5,6 +5,7 @@
   width: auto;
   min-height: 56px;
   background-color: #ffffff;
+  max-width: 1200px;
 
   @media (max-width: consts.$mobile-width-only) {
     &--nojs {
@@ -13,7 +14,6 @@
   }
 
   @media (min-width: consts.$tablet-width) {
-    width: 768px;
     margin: 0 auto;
   }
 
