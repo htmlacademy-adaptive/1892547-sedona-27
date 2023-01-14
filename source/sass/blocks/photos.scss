@@ -57,12 +57,12 @@
 
   @media (min-width: consts.$tablet-width) {
     display: grid;
-    grid-template-columns: 324px 324px;
+    grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: consts.$desktop-width) {
     display: grid;
-    grid-template-columns: 400px 400px 400px;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -93,6 +93,7 @@
 
   @media (min-width: consts.$tablet-width) {
     margin: 0;
+    background-color: #f2f2f2;
 
     &:nth-child(2n+1):not(:first-child) {
       background-color: #eaeaea;
