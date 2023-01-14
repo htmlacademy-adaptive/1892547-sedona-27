@@ -46,23 +46,20 @@
 
   @media (min-width: consts.$tablet-width) {
     display: block;
-    min-width: 153px;
+    min-width: 20%;
     border: none;
     font-size: 14px;
     line-height: 21px;
     padding-top: 18px;
 
-    &:nth-child(2) {
-      margin-right: 153px;
+    &:nth-child(2),
+    &:nth-child(6) {
+      margin-right: 20%;
     }
   }
 
   @media (min-width: consts.$desktop-width) {
     min-width: 240px;
-
-    &:nth-child(2) {
-      margin-right: 240px;
-    }
   }
 }
 

@@ -1,6 +1,13 @@
 @use "../blocks/consts.scss";
 @use "../blocks/mixins.scss";
 
+.video {
+  @media (min-width: consts.$desktop-width) {
+    width: 800px;
+    margin: 0 auto;
+  }
+}
+
 .video__title {
   @include mixins.large-text;
   text-align: center;
@@ -24,21 +31,19 @@
 .video__description {
   text-align: center;
   text-transform: uppercase;
-  margin: 0 6px 38px 8px;
+  margin: 0 auto 38px;
+  max-width: 445px;
 
   @media (max-width: consts.$mobile-width-only) {
-    br {
-      display: none;
-    }
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   @media (min-width: consts.$tablet-width) {
-    margin-left: 3px;
     margin-bottom: 90px;
   }
 
   @media (min-width: consts.$desktop-width) {
-    margin-left: 6px;
     margin-bottom: 88px;
   }
 }

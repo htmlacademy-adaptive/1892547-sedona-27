@@ -30,17 +30,16 @@
 
   @media (min-width: consts.$tablet-width) {
     display: grid;
-    grid-template-columns: 256px 256px 256px;
-  }
-
-  @media (min-width: consts.$desktop-width) {
-    display: grid;
-    grid-template-columns: 400px 400px 400px;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 .features__item {
   position: relative;
+
+  &:nth-child(n+3) {
+    background-color: #eeeeee;
+  }
 
   @media (max-width: consts.$mobile-width-only) {
     &:nth-last-child(-n+2)::before {
@@ -69,15 +68,7 @@
     &--city,
     &--bridge {
       grid-column: 1 / 4;
-      grid-template-columns: 256px 256px 256px;
-    }
-  }
-
-  @media (min-width: consts.$desktop-width) {
-    &--city,
-    &--bridge {
-      grid-column: 1 / 4;
-      grid-template-columns: 400px 400px 400px;
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 }
@@ -86,14 +77,17 @@
   @include mixins.large-text;
   text-align: center;
   color: consts.$title-color;
-  margin-top: 0;
-  margin-bottom: 35px;
+  margin: 0 auto 35px;
+  padding-left: 18px;
+  padding-right: 18px;
+  max-width: 520px;
+  min-height: 80px;
 
   @media (min-width: consts.$tablet-width) {
     font-size: 21px;
-    margin-bottom: 29px;
+    margin-bottom: 1px;
 
-    br:first-child {
+    br {
       display: none;
     }
   }
@@ -102,15 +96,10 @@
 .features__description {
   text-align: center;
   color: consts.$primary-text-color;
-  margin: 0;
-  margin-bottom: 16px;
+  margin: 0 18px 16px;
 
   @media (min-width: consts.$tablet-width) {
     margin-bottom: 55px;
-
-    br {
-      display: none;
-    }
   }
 
   @media (min-width: consts.$desktop-width) {

@@ -34,6 +34,8 @@
   color: consts.$title-color;
   margin: 0;
   margin-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   @media (min-width: consts.$tablet-width) {
     font-size: 30px;
@@ -43,13 +45,8 @@
 
 .photos__description {
   text-transform: uppercase;
-  margin: 0;
-
-  @media (max-width: consts.$mobile-width-only) {
-    br {
-      display: none;
-    }
-  }
+  margin: 0 auto;
+  max-width: 445px;
 }
 
 .photos__list {
@@ -60,12 +57,12 @@
 
   @media (min-width: consts.$tablet-width) {
     display: grid;
-    grid-template-columns: 324px 324px;
+    grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: consts.$desktop-width) {
     display: grid;
-    grid-template-columns: 400px 400px 400px;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -79,7 +76,7 @@
       content: "";
       top: -24px;
       height: 1px;
-      width: 100%;
+      width: 100vw;
       margin: 0 calc(-50vw + 50%);
       background-color: #e5e5e5;
     }
@@ -89,13 +86,14 @@
       content: "";
       bottom: -27px;
       height: 1px;
-      width: 320px;
+      width: 100vw;
       background-color: #e5e5e5;
     }
   }
 
   @media (min-width: consts.$tablet-width) {
     margin: 0;
+    background-color: #f2f2f2;
 
     &:nth-child(2n+1):not(:first-child) {
       background-color: #eaeaea;

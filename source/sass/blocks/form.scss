@@ -11,8 +11,10 @@
 .form__wrapper {
   @media (min-width: consts.$tablet-width) {
     position: relative;
-    display: flex;
-    gap: 88px;
+    display: grid;
+    column-gap: 88px;
+    row-gap: 20px;
+    grid-template-columns: 1fr 1fr;
     margin-bottom: 64px;
     width: 100%;
 
@@ -28,7 +30,7 @@
 
   @media (min-width: consts.$desktop-width) {
     display: flex;
-    gap: 128px;
+    column-gap: 128px;
     margin-bottom: 71px;
 
     &::before {
@@ -45,11 +47,17 @@
   border: none;
   width: 100%;
 
+  .form__wrapper & {
+    @media (min-width: consts.$tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
   &--name {
     margin-bottom: 64px;
 
     @media (min-width: consts.$tablet-width) {
-      margin-bottom: 0;
+      margin-right: auto;
     }
   }
 
@@ -57,7 +65,7 @@
     margin-bottom: 59px;
 
     @media (min-width: consts.$tablet-width) {
-      margin-bottom: 0;
+      margin-left: auto;
     }
   }
 
